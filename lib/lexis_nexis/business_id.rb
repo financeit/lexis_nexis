@@ -118,7 +118,7 @@ module LexisNexis
     private
 
     def client
-      @client ||= LexisNexis.client(::LEXIS_NEXIS_WSDL, true)
+      @client ||= LexisNexis.client(::LEXIS_NEXIS_WSDL, log: true)
     end
 
     def build_hash(indexes, options)

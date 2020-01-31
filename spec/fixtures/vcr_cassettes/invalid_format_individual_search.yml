@@ -37,13 +37,13 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       X-Xg5-Version:
-      - 5.28.1249.0
+      - 5.28.1252.0
       Date:
-      - Tue, 21 Jan 2020 19:29:37 GMT
+      - Wed, 05 Feb 2020 22:49:55 GMT
       Content-Length:
       - '4443'
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: <?xml version="1.0" encoding="utf-8"?><wsdl:definitions name="XGServices"
         targetNamespace="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0"
         xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
@@ -422,6 +422,70 @@ http_interactions:
         location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Results"/></wsdl:port><wsdl:port
         name="BasicHttpBinding_ISearch" binding="tns:BasicHttpBinding_ISearch"><soap:address
         location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search"/></wsdl:port></wsdl:service></wsdl:definitions>
-    http_version: 
-  recorded_at: Tue, 21 Jan 2020 19:29:37 GMT
-recorded_with: VCR 5.0.0
+    http_version: null
+  recorded_at: Wed, 05 Feb 2020 22:49:55 GMT
+- request:
+    method: post
+    uri: https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:brid="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0"
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><brid:Search><brid:context><brid:ClientID><CLIENT_ID></brid:ClientID><brid:Password><PASSWORD></brid:Password><brid:UserID><USERNAME></brid:UserID></brid:context><brid:config><brid:PredefinedSearchName>Borrower
+        Onboarding</brid:PredefinedSearchName></brid:config><brid:input><brid:Records><brid:InputRecord><brid:Entity><brid:EntityType>Individual</brid:EntityType><brid:Name><brid:First>Donald</brid:First><brid:Last>Trump</brid:Last><brid:Full>Donald
+        Trump</brid:Full></brid:Name><brid:Addresses><brid:InputAddress><brid:Country>United
+        States</brid:Country><brid:Type>Current</brid:Type></brid:InputAddress></brid:Addresses><brid:Gender>Male</brid:Gender><brid:AdditionalInfo><brid:InputAdditionalInfo><brid:Number>1946-06-14</brid:Number><brid:Type
+        xsi:nil="true"/></brid:InputAdditionalInfo></brid:AdditionalInfo></brid:Entity></brid:InputRecord></brid:Records></brid:input></brid:Search></soap:Body></soap:Envelope>
+    headers:
+      Soapaction:
+      - '"https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/Search"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '1236'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/xml; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xg5-Version:
+      - 5.28.1252.0
+      Date:
+      - Wed, 05 Feb 2020 22:49:54 GMT
+      Content-Length:
+      - '896'
+    body:
+      encoding: UTF-8
+      string: |-
+        <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><s:Fault><faultcode xmlns:a="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0">a:ServiceFaultFault</faultcode><faultstring xml:lang="en-US">Error in deserializing body of request message for operation 'Search'.
+        There is an error in XML document (1, 1112).
+        Instance validation error: '' is not a valid value for AdditionalInfoType.</faultstring><detail><ServiceFault xmlns="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Message>Error in deserializing body of request message for operation 'Search'.
+        There is an error in XML document (1, 1112).
+        Instance validation error: '' is not a valid value for AdditionalInfoType.</Message><Type>Error</Type></ServiceFault></detail></s:Fault></s:Body></s:Envelope>
+    http_version: null
+  recorded_at: Wed, 05 Feb 2020 22:49:55 GMT
+recorded_with: VCR 5.1.0
