@@ -7,10 +7,6 @@ require 'lexis_nexis/search_attributes'
 # LexisNexis class connects to client with WSDL, sends requests, and handles responses
 # Default endpoint is Search
 module LexisNexis
-  LEXIS_NEXIS_USERNAME ||= ''
-  LEXIS_NEXIS_PASSWORD ||= ''
-  LEXIS_NEXIS_CLIENT_ID ||= ''
-
   DEFAULT_CLIENT_HASH = {
     env_namespace: :soap,
     element_form_default: :qualified,
