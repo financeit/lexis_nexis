@@ -83,7 +83,7 @@ RSpec.describe LexisNexis::SearchService do
       let(:input_data) do
         {
           name: name_fields,
-          addresses: [{ country: 'United States' }],
+          addresses: [{ country: 'United States', type: 'Current' }],
           other: { gender: 'Male' },
           additional_info: [info_fields]
         }
