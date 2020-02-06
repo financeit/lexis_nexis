@@ -4,6 +4,8 @@ require 'savon'
 require 'lexis_nexis/response'
 require 'lexis_nexis/search_attributes'
 
+# LexisNexis class connects to client with WSDL, sends requests, and handles responses
+# Default endpoint is Search
 module LexisNexis
   LEXIS_NEXIS_USERNAME ||= ''
   LEXIS_NEXIS_PASSWORD ||= ''
@@ -21,9 +23,6 @@ module LexisNexis
   RESPONSE_INDEX = "XML"
   DEFAULT_ERROR_MESSAGE = "Error in Response"
   KEYERROR_MESSAGE = "Malformed response object"
-  PARSE_HEADERS = {
-    :business_instant_id => :business_instant_id_response_ex
-  }
 
   def self.client(wsdl, endpoint: 'Search', log: false)
     config = DEFAULT_CLIENT_HASH
@@ -43,30 +42,20 @@ module LexisNexis
 
   def self.send_request(client_obj, operation, hash)
     results = client_obj.call(operation, message: hash)
-    response_body_index = PARSE_HEADERS[operation]
-    if !response_body_index.nil? && !results.body.nil? && !results.body[response_body_index].nil?
-      response_body = results.body[response_body_index][:response][:result]
-    else
-      response_body = results.body
-    end
-    LexisNexis::Response.success(response_body)
+    LexisNexis::Response.success(results.body)
   rescue Savon::SOAPFault => e
     error_hash = e.to_hash
-    report_error(operation, error_hash[:fault][:faultcode], error_hash[:fault][:detail][:service_fault])
+    report_error(error_hash[:fault][:faultcode], error_hash[:fault][:detail][:service_fault])
   rescue Savon::HTTPError => e
     error_hash = e.to_hash
     LexisNexis::Response.error(error_hash.code, error_hash.body)
   end
 
-  def self.report_error(operation, fault_code, errors)
-    #we may receive one or more exceptions. log all of them just incase
+  def self.report_error(fault_code, errors)
+    # We may receive one or more exceptions. log all of them just incase
     errors = errors.is_a?(Array) ? errors : [errors]
     codes = []
-    errors.each do |error|
-      error_string = "LexisNexis::#{operation.to_s.upcase} failed with error `#{error[:message]}`"
-      code = error_code(error[:message])
-      codes.push(code)
-    end
+    errors.each { |error| codes.push(error_code(error[:message])) }
     LexisNexis::Response.error(codes.first || fault_code, errors)
   end
 

@@ -6,7 +6,8 @@ RSpec.describe LexisNexis::SearchService do
   include Savon::SpecHelper
 
   before do
-    stub_const('LEXIS_NEXIS_WSDL', 'https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?wsdl')
+    stub_const('LEXIS_NEXIS_WSDL',
+               'https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?wsdl')
   end
 
   describe '.call!' do
@@ -46,7 +47,16 @@ RSpec.describe LexisNexis::SearchService do
             LexisNexis::SearchService.call!(entity_type, input_data)
           end
           expect(response.code).to be_nil
-          error = response.data.dig(:search_response, :search_result, :records, :result_record, :watchlist, :matches, :wl_match, :error)
+          error = response.data.dig(
+            :search_response,
+            :search_result,
+            :records,
+            :result_record,
+            :watchlist,
+            :matches,
+            :wl_match,
+            :error
+          )
           expect(error[:code]).to eq('536870950')
           expect(error[:message]).to eq('The name is empty or contains invalid data')
         end
@@ -73,9 +83,9 @@ RSpec.describe LexisNexis::SearchService do
       let(:input_data) do
         {
           name: name_fields,
-          addresses: [ { country: 'United States' } ],
+          addresses: [{ country: 'United States' }],
           other: { gender: 'Male' },
-          additional_info: [ info_fields ]
+          additional_info: [info_fields]
         }
       end
       let(:name_fields) { { first_name: 'Donald', last_name: 'Trump', full_name: 'Donald Trump' } }
@@ -112,7 +122,16 @@ RSpec.describe LexisNexis::SearchService do
             LexisNexis::SearchService.call!(entity_type, input_data)
           end
           expect(response.code).to be_nil
-          error = response.data.dig(:search_response, :search_result, :records, :result_record, :watchlist, :matches, :wl_match, :error)
+          error = response.data.dig(
+            :search_response,
+            :search_result,
+            :records,
+            :result_record,
+            :watchlist,
+            :matches,
+            :wl_match,
+            :error
+          )
           expect(error[:code]).to eq('536870950')
           expect(error[:message]).to eq('The name is empty or contains invalid data')
         end

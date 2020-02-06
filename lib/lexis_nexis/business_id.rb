@@ -10,7 +10,7 @@ module LexisNexis
     SEARCH_OPTIONS_ARRAY = %w(alternate_company_name company_address fein company_phone authorized_representative use_dob_filter dob_radius)
     WATCHLISTS = %w(BES CFTC DTC EUDT FBI FCEN FAR IMW OFAC OCC OSFI PEP SDT BIS UNNT WBIF)
     DOB_MATCHES = %w(FuzzyCCYYMMDD FuzzyCCYYMM RadiusCCYY ExactCCYYMMDD ExactCCYYMM)
-    #options defaults
+    # options defaults
     INCLUDE_MS_OVERRIDE = 0
     INCLUDE_DL_VERIFICATION = 0
     PO_BOX_COMPLIANCE = 0
@@ -38,7 +38,7 @@ module LexisNexis
 
     def wrap_request(*hashes)
       auth_hash = { "User" => user_hash(*DEFAULT_USER_OPTIONS)}
-      hashes.each{ |hash| auth_hash.merge!(hash) }
+      hashes.each { |hash| auth_hash.merge!(hash) }
       auth_hash
     end
 

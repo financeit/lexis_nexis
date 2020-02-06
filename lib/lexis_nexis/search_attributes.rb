@@ -3,6 +3,7 @@
 require 'lexis_nexis/search_helper'
 
 module LexisNexis
+  # Module to build search attributes for LexisNexis search operation input
   module SearchAttributes
     class << self
       include LexisNexis::SearchHelper
@@ -25,7 +26,7 @@ module LexisNexis
                 IDs: get_object_hash_list(:InputId, data.dig(:ids)), # Might just be for business
                 Phones: get_object_hash_list(:InputPhone, data.dig(:phones)), # Both
                 Gender: data.dig(:other, :gender), # Only for individual
-                AdditionalInfo: get_object_hash_list(:InputAdditionalInfo, data.dig(:additional_info)) # Only for individual
+                AdditionalInfo: get_object_hash_list(:InputAdditionalInfo, data.dig(:additional_info)) # Individual
               }.compact
             }
           }

@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 module LexisNexis
+  # Module to handle LexisNexis response
   module Response
     # Creates a success ResponseObject instance
     # Params:
@@ -18,7 +19,7 @@ module LexisNexis
       ResponseObject.new(errors, code)
     end
 
-    #Object class for success/error responses
+    # Object class for success/error responses
     class ResponseObject
       attr_reader :code, :data, :errors
       # Creates either a succes or error ResponseObject instance
@@ -35,6 +36,7 @@ module LexisNexis
           @data = data
         end
       end
+
       # Checks for a successful ResponseObject
       def success?
         @code.blank?

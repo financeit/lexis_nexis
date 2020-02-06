@@ -3,6 +3,7 @@
 require 'lexis_nexis'
 
 module LexisNexis
+  # Class to handle calls to search for an entity
   class SearchService
     include LexisNexis
 
