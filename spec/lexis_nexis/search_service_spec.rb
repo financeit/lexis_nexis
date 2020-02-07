@@ -63,11 +63,11 @@ RSpec.describe LexisNexis::SearchService do
       end
 
       context 'when searching with incorrectly formatted input' do
-        let(:invalid_phone_input) { { phones: [{ value: '1234567890' }] } }
+        let(:invalid_additional_info) { { additional_info: [{ something: '1234567890' }] } }
 
         it 'returns a deserialization error' do
           response = VCR.use_cassette('invalid_format_business_search') do
-            LexisNexis::SearchService.call!(entity_type, input_data.merge(invalid_phone_input))
+            LexisNexis::SearchService.call!(entity_type, input_data.merge(invalid_additional_info))
           end
           expect(response.code).not_to be_nil
           expect(response.data).to be_nil
@@ -138,7 +138,7 @@ RSpec.describe LexisNexis::SearchService do
       end
 
       context 'when searching with incorrectly formatted input' do
-        let(:info_fields) { { value: '1946-06-14' } }
+        let(:info_fields) { { something: '1946-06-14' } }
 
         it 'returns a deserialization error' do
           response = VCR.use_cassette('invalid_format_individual_search') do

@@ -1,0 +1,42 @@
+---
+:input:
+  :Records:
+    :InputRecord:
+      :Entity:
+        :EntityType: Individual
+        :Name:
+          :First: Michael
+          :Last: Scott
+          :Full: Michael Gary Scott
+          :Middle: Gary
+        :Addresses:
+          - :InputAddress:
+              :City: Toronto
+              :Country: Canada
+              :FullAddress: 123 Sesame Street
+              :Street1: 123 Sesame Street
+              :Street2: Suite 1234
+              :PostalCode: 123456
+              :State: Ontario
+              :Type: Current
+          - :InputAddress:
+              :City: Toronto
+              :Country: Canada
+              :FullAddress: 456 Sesame Street
+              :Street1: 456 Sesame Street
+              :Street2: Suite 1234
+              :PostalCode: 123456
+              :State: Ontario
+              :Type: Mailing
+        :Phones:
+          - :InputPhone:
+              :Type: Home
+              :Number: 1234567890
+          - :InputPhone:
+              :Type: Business
+              :Number: 1234567890
+        :Gender: Male
+        :AdditionalInfo:
+          - :InputAdditionalInfo:
+              :Type: DOB
+              :Number: March 15, 1965

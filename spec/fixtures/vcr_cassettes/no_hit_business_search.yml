@@ -39,7 +39,7 @@ http_interactions:
       X-Xg5-Version:
       - 5.28.1252.0
       Date:
-      - Thu, 06 Feb 2020 21:03:22 GMT
+      - Fri, 07 Feb 2020 14:53:59 GMT
       Content-Length:
       - '52473'
     body:
@@ -896,7 +896,7 @@ http_interactions:
           </wsdl:service>
         </wsdl:definitions>
     http_version: null
-  recorded_at: Thu, 06 Feb 2020 21:03:22 GMT
+  recorded_at: Fri, 07 Feb 2020 14:53:59 GMT
 - request:
     method: post
     uri: https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search
@@ -945,7 +945,7 @@ http_interactions:
       X-Xg5-Version:
       - 5.28.1252.0
       Date:
-      - Thu, 06 Feb 2020 21:03:22 GMT
+      - Fri, 07 Feb 2020 14:53:59 GMT
       Content-Length:
       - '462'
     body:
@@ -962,5 +962,5 @@ http_interactions:
           </s:Body>
         </s:Envelope>
     http_version: null
-  recorded_at: Thu, 06 Feb 2020 21:03:22 GMT
+  recorded_at: Fri, 07 Feb 2020 14:54:00 GMT
 recorded_with: VCR 5.1.0

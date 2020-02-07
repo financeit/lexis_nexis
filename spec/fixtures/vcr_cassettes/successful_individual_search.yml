@@ -39,7 +39,7 @@ http_interactions:
       X-Xg5-Version:
       - 5.28.1252.0
       Date:
-      - Thu, 06 Feb 2020 21:03:24 GMT
+      - Fri, 07 Feb 2020 14:54:01 GMT
       Content-Length:
       - '52473'
     body:
@@ -896,7 +896,7 @@ http_interactions:
           </wsdl:service>
         </wsdl:definitions>
     http_version: null
-  recorded_at: Thu, 06 Feb 2020 21:03:24 GMT
+  recorded_at: Fri, 07 Feb 2020 14:54:01 GMT
 - request:
     method: post
     uri: https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search
@@ -947,7 +947,7 @@ http_interactions:
       X-Xg5-Version:
       - 5.28.1252.0
       Date:
-      - Thu, 06 Feb 2020 21:03:24 GMT
+      - Fri, 07 Feb 2020 14:54:02 GMT
       Content-Length:
       - '51487'
     body:
@@ -964,7 +964,7 @@ http_interactions:
         \                 <Type>Current</Type>\n                </InputAddress>\n
         \             </Addresses>\n              <DPPA>NA</DPPA>\n              <EFTContext/>\n
         \             <EFTType>None</EFTType>\n              <EntityType>Individual</EntityType>\n
-        \             <Gender>Male</Gender>\n              <GLB>255</GLB>\n              <LastUpdatedDate>2020-02-06T21:03:24.3596246Z</LastUpdatedDate>\n
+        \             <Gender>Male</Gender>\n              <GLB>255</GLB>\n              <LastUpdatedDate>2020-02-07T14:54:02.1124282Z</LastUpdatedDate>\n
         \             <Name>\n                <First>Donald</First>\n                <Full>Donald
         Trump</Full>\n                <Generation/>\n                <Last>Trump</Last>\n
         \               <Middle/>\n                <Title/>\n              </Name>\n
@@ -977,7 +977,7 @@ http_interactions:
         \                 <WatchlistMatchState>\n                    <MatchID>0</MatchID>\n
         \                   <Type>None</Type>\n                  </WatchlistMatchState>\n
         \               </MatchStates>\n                <Status/>\n              </RecordState>\n
-        \             <SearchDate>2020-02-06T21:03:24.3596246Z</SearchDate>\n              <Text/>\n
+        \             <SearchDate>2020-02-07T14:54:02.1124282Z</SearchDate>\n              <Text/>\n
         \           </RecordDetails>\n            <ResultID>-1</ResultID>\n            <RunID>-1</RunID>\n
         \           <Watchlist>\n              <Matches>\n                <WLMatch>\n
         \                 <AcceptListID>-1</AcceptListID>\n                  <AddedToAcceptList>false</AddedToAcceptList>\n
@@ -1039,16 +1039,16 @@ http_interactions:
         Member</ReasonListed>\n                  </EntityDetails>\n                  <EntityName>Trump,
         Donald John III</EntityName>\n                  <EntityScore>94</EntityScore>\n
         \                 <EntityUniqueID>WX0007646989</EntityUniqueID>\n                  <FalsePositive>false</FalsePositive>\n
-        \                 <File>\n                    <Build>2020-02-05T12:06:10Z</Build>\n
-        \                   <Custom>false</Custom>\n                    <ID>410775</ID>\n
-        \                   <Name>WorldCompliance - Full.BDF</Name>\n                    <Published>2020-02-04T00:01:00Z</Published>\n
+        \                 <File>\n                    <Build>2020-02-06T12:15:28Z</Build>\n
+        \                   <Custom>false</Custom>\n                    <ID>411085</ID>\n
+        \                   <Name>WorldCompliance - Full.BDF</Name>\n                    <Published>2020-02-05T00:01:00Z</Published>\n
         \                   <Type>BDF</Type>\n                  </File>\n                  <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>\n
         \                 <ID>-1</ID>\n                  <MatchReAlert>false</MatchReAlert>\n
         \                 <MatchXML>\n                    <Gender>\n                      <Input>Male</Input>\n
         \                     <List>Male</List>\n                      <Score>100</Score>\n
         \                   </Gender>\n                  </MatchXML>\n                  <PreviousResultID>-1</PreviousResultID>\n
         \                 <ReasonListed>National:PEP:Family Member</ReasonListed>\n
-        \                 <ResultDate>2020-02-06T21:03:24.3586225Z</ResultDate>\n
+        \                 <ResultDate>2020-02-07T14:54:02.1114281Z</ResultDate>\n
         \                 <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>\n
         \                 <TrueMatch>false</TrueMatch>\n                </WLMatch>\n
         \               <WLMatch>\n                  <AcceptListID>-1</AcceptListID>\n
@@ -1152,16 +1152,16 @@ http_interactions:
         Member</ReasonListed>\n                  </EntityDetails>\n                  <EntityName>Trump,
         Donald John Jr.</EntityName>\n                  <EntityScore>94</EntityScore>\n
         \                 <EntityUniqueID>WX0002537467</EntityUniqueID>\n                  <FalsePositive>false</FalsePositive>\n
-        \                 <File>\n                    <Build>2020-02-05T12:06:10Z</Build>\n
-        \                   <Custom>false</Custom>\n                    <ID>410775</ID>\n
-        \                   <Name>WorldCompliance - Full.BDF</Name>\n                    <Published>2020-02-04T00:01:00Z</Published>\n
+        \                 <File>\n                    <Build>2020-02-06T12:15:28Z</Build>\n
+        \                   <Custom>false</Custom>\n                    <ID>411085</ID>\n
+        \                   <Name>WorldCompliance - Full.BDF</Name>\n                    <Published>2020-02-05T00:01:00Z</Published>\n
         \                   <Type>BDF</Type>\n                  </File>\n                  <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>\n
         \                 <ID>-1</ID>\n                  <MatchReAlert>false</MatchReAlert>\n
         \                 <MatchXML>\n                    <Gender>\n                      <Input>Male</Input>\n
         \                     <List>Male</List>\n                      <Score>100</Score>\n
         \                   </Gender>\n                  </MatchXML>\n                  <PreviousResultID>-1</PreviousResultID>\n
         \                 <ReasonListed>National:PEP:Family Member</ReasonListed>\n
-        \                 <ResultDate>2020-02-06T21:03:24.3586225Z</ResultDate>\n
+        \                 <ResultDate>2020-02-07T14:54:02.1114281Z</ResultDate>\n
         \                 <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>\n
         \                 <TrueMatch>false</TrueMatch>\n                </WLMatch>\n
         \               <WLMatch>\n                  <AcceptListID>-1</AcceptListID>\n
@@ -1493,21 +1493,21 @@ http_interactions:
         Branch Member</ReasonListed>\n                  </EntityDetails>\n                  <EntityName>Trump,
         Donald John Sr</EntityName>\n                  <EntityScore>94</EntityScore>\n
         \                 <EntityUniqueID>WX0001930191</EntityUniqueID>\n                  <FalsePositive>false</FalsePositive>\n
-        \                 <File>\n                    <Build>2020-02-05T12:06:10Z</Build>\n
-        \                   <Custom>false</Custom>\n                    <ID>410775</ID>\n
-        \                   <Name>WorldCompliance - Full.BDF</Name>\n                    <Published>2020-02-04T00:01:00Z</Published>\n
+        \                 <File>\n                    <Build>2020-02-06T12:15:28Z</Build>\n
+        \                   <Custom>false</Custom>\n                    <ID>411085</ID>\n
+        \                   <Name>WorldCompliance - Full.BDF</Name>\n                    <Published>2020-02-05T00:01:00Z</Published>\n
         \                   <Type>BDF</Type>\n                  </File>\n                  <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>\n
         \                 <ID>-1</ID>\n                  <MatchReAlert>false</MatchReAlert>\n
         \                 <MatchXML>\n                    <Gender>\n                      <Input>Male</Input>\n
         \                     <List>Male</List>\n                      <Score>100</Score>\n
         \                   </Gender>\n                  </MatchXML>\n                  <PreviousResultID>-1</PreviousResultID>\n
         \                 <ReasonListed>National:PEP:Govt Branch Member</ReasonListed>\n
-        \                 <ResultDate>2020-02-06T21:03:24.3586225Z</ResultDate>\n
+        \                 <ResultDate>2020-02-07T14:54:02.1114281Z</ResultDate>\n
         \                 <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>\n
         \                 <TrueMatch>false</TrueMatch>\n                </WLMatch>\n
         \             </Matches>\n              <Status>Results</Status>\n            </Watchlist>\n
         \         </ResultRecord>\n        </Records>\n        <SearchEngineVersion>5.28.1252.0</SearchEngineVersion>\n
         \     </SearchResult>\n    </SearchResponse>\n  </s:Body>\n</s:Envelope>\n"
     http_version: null
-  recorded_at: Thu, 06 Feb 2020 21:03:24 GMT
+  recorded_at: Fri, 07 Feb 2020 14:54:02 GMT
 recorded_with: VCR 5.1.0

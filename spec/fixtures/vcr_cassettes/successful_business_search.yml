@@ -39,7 +39,7 @@ http_interactions:
       X-Xg5-Version:
       - 5.28.1252.0
       Date:
-      - Thu, 06 Feb 2020 21:03:21 GMT
+      - Fri, 07 Feb 2020 14:53:58 GMT
       Content-Length:
       - '52473'
     body:
@@ -896,7 +896,7 @@ http_interactions:
           </wsdl:service>
         </wsdl:definitions>
     http_version: null
-  recorded_at: Thu, 06 Feb 2020 21:03:21 GMT
+  recorded_at: Fri, 07 Feb 2020 14:53:58 GMT
 - request:
     method: post
     uri: https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search
@@ -946,7 +946,7 @@ http_interactions:
       X-Xg5-Version:
       - 5.28.1252.0
       Date:
-      - Thu, 06 Feb 2020 21:03:21 GMT
+      - Fri, 07 Feb 2020 14:53:58 GMT
       Content-Length:
       - '44540'
     body:
@@ -975,7 +975,7 @@ http_interactions:
                       <EntityType>Business</EntityType>
                       <Gender>None</Gender>
                       <GLB>255</GLB>
-                      <LastUpdatedDate>2020-02-06T21:03:22.1207498Z</LastUpdatedDate>
+                      <LastUpdatedDate>2020-02-07T14:53:59.5970511Z</LastUpdatedDate>
                       <Name>
                         <First/>
                         <Full>Cannabis Culture</Full>
@@ -1020,7 +1020,7 @@ http_interactions:
                         </MatchStates>
                         <Status/>
                       </RecordState>
-                      <SearchDate>2020-02-06T21:03:22.1207498Z</SearchDate>
+                      <SearchDate>2020-02-07T14:53:59.5970511Z</SearchDate>
                       <Text/>
                     </RecordDetails>
                     <ResultID>-1</ResultID>
@@ -1121,11 +1121,11 @@ http_interactions:
                           <EntityUniqueID>WX0010481252</EntityUniqueID>
                           <FalsePositive>false</FalsePositive>
                           <File>
-                            <Build>2020-02-05T09:40:47Z</Build>
+                            <Build>2020-02-06T09:49:02Z</Build>
                             <Custom>false</Custom>
-                            <ID>410785</ID>
+                            <ID>411095</ID>
                             <Name>WorldCompliance - Registrations.BDF</Name>
-                            <Published>2020-02-04T00:01:00Z</Published>
+                            <Published>2020-02-05T00:01:00Z</Published>
                             <Type>BDF</Type>
                           </File>
                           <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
@@ -1133,7 +1133,7 @@ http_interactions:
                           <MatchReAlert>false</MatchReAlert>
                           <PreviousResultID>-1</PreviousResultID>
                           <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
-                          <ResultDate>2020-02-06T21:03:22.1157494Z</ResultDate>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
                           <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
                           <TrueMatch>false</TrueMatch>
                         </WLMatch>
@@ -1247,11 +1247,11 @@ http_interactions:
                           <EntityUniqueID>WX0007164460</EntityUniqueID>
                           <FalsePositive>false</FalsePositive>
                           <File>
-                            <Build>2020-02-05T09:40:47Z</Build>
+                            <Build>2020-02-06T09:49:02Z</Build>
                             <Custom>false</Custom>
-                            <ID>410785</ID>
+                            <ID>411095</ID>
                             <Name>WorldCompliance - Registrations.BDF</Name>
-                            <Published>2020-02-04T00:01:00Z</Published>
+                            <Published>2020-02-05T00:01:00Z</Published>
                             <Type>BDF</Type>
                           </File>
                           <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
@@ -1259,7 +1259,7 @@ http_interactions:
                           <MatchReAlert>false</MatchReAlert>
                           <PreviousResultID>-1</PreviousResultID>
                           <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
-                          <ResultDate>2020-02-06T21:03:22.1157494Z</ResultDate>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
                           <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
                           <TrueMatch>false</TrueMatch>
                         </WLMatch>
@@ -1346,11 +1346,11 @@ http_interactions:
                           <EntityUniqueID>WX0007099381</EntityUniqueID>
                           <FalsePositive>false</FalsePositive>
                           <File>
-                            <Build>2020-02-05T09:40:47Z</Build>
+                            <Build>2020-02-06T09:49:02Z</Build>
                             <Custom>false</Custom>
-                            <ID>410785</ID>
+                            <ID>411095</ID>
                             <Name>WorldCompliance - Registrations.BDF</Name>
-                            <Published>2020-02-04T00:01:00Z</Published>
+                            <Published>2020-02-05T00:01:00Z</Published>
                             <Type>BDF</Type>
                           </File>
                           <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
@@ -1358,7 +1358,7 @@ http_interactions:
                           <MatchReAlert>false</MatchReAlert>
                           <PreviousResultID>-1</PreviousResultID>
                           <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
-                          <ResultDate>2020-02-06T21:03:22.1157494Z</ResultDate>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
                           <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
                           <TrueMatch>false</TrueMatch>
                         </WLMatch>
@@ -1481,11 +1481,11 @@ http_interactions:
                           <EntityUniqueID>WX0008296843</EntityUniqueID>
                           <FalsePositive>false</FalsePositive>
                           <File>
-                            <Build>2020-02-05T09:40:47Z</Build>
+                            <Build>2020-02-06T09:49:02Z</Build>
                             <Custom>false</Custom>
-                            <ID>410785</ID>
+                            <ID>411095</ID>
                             <Name>WorldCompliance - Registrations.BDF</Name>
-                            <Published>2020-02-04T00:01:00Z</Published>
+                            <Published>2020-02-05T00:01:00Z</Published>
                             <Type>BDF</Type>
                           </File>
                           <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
@@ -1493,7 +1493,7 @@ http_interactions:
                           <MatchReAlert>false</MatchReAlert>
                           <PreviousResultID>-1</PreviousResultID>
                           <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
-                          <ResultDate>2020-02-06T21:03:22.1157494Z</ResultDate>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
                           <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
                           <TrueMatch>false</TrueMatch>
                         </WLMatch>
@@ -1577,11 +1577,11 @@ http_interactions:
                           <EntityUniqueID>WX0009582843</EntityUniqueID>
                           <FalsePositive>false</FalsePositive>
                           <File>
-                            <Build>2020-02-05T09:40:47Z</Build>
+                            <Build>2020-02-06T09:49:02Z</Build>
                             <Custom>false</Custom>
-                            <ID>410785</ID>
+                            <ID>411095</ID>
                             <Name>WorldCompliance - Registrations.BDF</Name>
-                            <Published>2020-02-04T00:01:00Z</Published>
+                            <Published>2020-02-05T00:01:00Z</Published>
                             <Type>BDF</Type>
                           </File>
                           <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
@@ -1589,7 +1589,7 @@ http_interactions:
                           <MatchReAlert>false</MatchReAlert>
                           <PreviousResultID>-1</PreviousResultID>
                           <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
-                          <ResultDate>2020-02-06T21:03:22.1157494Z</ResultDate>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
                           <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
                           <TrueMatch>false</TrueMatch>
                         </WLMatch>
@@ -1674,11 +1674,11 @@ http_interactions:
                           <EntityUniqueID>WX0008296877</EntityUniqueID>
                           <FalsePositive>false</FalsePositive>
                           <File>
-                            <Build>2020-02-05T09:40:47Z</Build>
+                            <Build>2020-02-06T09:49:02Z</Build>
                             <Custom>false</Custom>
-                            <ID>410785</ID>
+                            <ID>411095</ID>
                             <Name>WorldCompliance - Registrations.BDF</Name>
-                            <Published>2020-02-04T00:01:00Z</Published>
+                            <Published>2020-02-05T00:01:00Z</Published>
                             <Type>BDF</Type>
                           </File>
                           <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
@@ -1686,7 +1686,7 @@ http_interactions:
                           <MatchReAlert>false</MatchReAlert>
                           <PreviousResultID>-1</PreviousResultID>
                           <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
-                          <ResultDate>2020-02-06T21:03:22.1157494Z</ResultDate>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
                           <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
                           <TrueMatch>false</TrueMatch>
                         </WLMatch>
@@ -1782,11 +1782,11 @@ http_interactions:
                           <EntityUniqueID>WX0009436994</EntityUniqueID>
                           <FalsePositive>false</FalsePositive>
                           <File>
-                            <Build>2020-02-05T09:40:47Z</Build>
+                            <Build>2020-02-06T09:49:02Z</Build>
                             <Custom>false</Custom>
-                            <ID>410785</ID>
+                            <ID>411095</ID>
                             <Name>WorldCompliance - Registrations.BDF</Name>
-                            <Published>2020-02-04T00:01:00Z</Published>
+                            <Published>2020-02-05T00:01:00Z</Published>
                             <Type>BDF</Type>
                           </File>
                           <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
@@ -1794,7 +1794,7 @@ http_interactions:
                           <MatchReAlert>false</MatchReAlert>
                           <PreviousResultID>-1</PreviousResultID>
                           <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
-                          <ResultDate>2020-02-06T21:03:22.1157494Z</ResultDate>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
                           <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
                           <TrueMatch>false</TrueMatch>
                         </WLMatch>
@@ -1809,5 +1809,5 @@ http_interactions:
           </s:Body>
         </s:Envelope>
     http_version: null
-  recorded_at: Thu, 06 Feb 2020 21:03:22 GMT
+  recorded_at: Fri, 07 Feb 2020 14:53:59 GMT
 recorded_with: VCR 5.1.0

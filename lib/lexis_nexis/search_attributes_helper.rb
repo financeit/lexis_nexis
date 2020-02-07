@@ -17,7 +17,7 @@ module LexisNexis
     CATCH_ALL_TYPES = {
       InputPhone: 'Unknown',
       InputId: 'Other'
-    }
+    }.freeze
 
     def self.format_input(entity_type, data)
       {
@@ -93,13 +93,10 @@ module LexisNexis
                     VALID_ADDITIONAL_INFO_TYPES
                   end
 
-      if !type_list.include?(object.dig(:type))
-        raise(
-          TypeError,
-          "#{object_name} Type value #{object.dig(:type)} invalid. Type must be one of #{type_list}."
-        )
+      unless type_list.include?(object.dig(:type))
+        raise(TypeError, "#{object_name} Type value #{object.dig(:type)} invalid. " \
+              "Type must be one of #{type_list}.")
       end
     end
-
   end
 end

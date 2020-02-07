@@ -39,7 +39,7 @@ http_interactions:
       X-Xg5-Version:
       - 5.28.1252.0
       Date:
-      - Thu, 06 Feb 2020 21:03:25 GMT
+      - Fri, 07 Feb 2020 19:41:46 GMT
       Content-Length:
       - '52473'
     body:
@@ -896,7 +896,7 @@ http_interactions:
           </wsdl:service>
         </wsdl:definitions>
     http_version: null
-  recorded_at: Thu, 06 Feb 2020 21:03:25 GMT
+  recorded_at: Fri, 07 Feb 2020 19:41:46 GMT
 - request:
     method: post
     uri: https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search
@@ -907,15 +907,15 @@ http_interactions:
         xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><brid:Search><brid:context><brid:ClientID><CLIENT_ID></brid:ClientID><brid:Password><PASSWORD></brid:Password><brid:UserID><USERNAME></brid:UserID></brid:context><brid:config><brid:PredefinedSearchName>Borrower
         Onboarding</brid:PredefinedSearchName></brid:config><brid:input><brid:Records><brid:InputRecord><brid:Entity><brid:EntityType>Individual</brid:EntityType><brid:Name><brid:First>Donald</brid:First><brid:Last>Trump</brid:Last><brid:Full>Donald
         Trump</brid:Full></brid:Name><brid:Addresses><brid:InputAddress><brid:Country>United
-        States</brid:Country><brid:Type>Current</brid:Type></brid:InputAddress></brid:Addresses><brid:Gender>Male</brid:Gender><brid:AdditionalInfo><brid:InputAdditionalInfo><brid:Number>1946-06-14</brid:Number><brid:Type
-        xsi:nil="true"/></brid:InputAdditionalInfo></brid:AdditionalInfo></brid:Entity></brid:InputRecord></brid:Records></brid:input></brid:Search></soap:Body></soap:Envelope>
+        States</brid:Country><brid:Type>Current</brid:Type></brid:InputAddress></brid:Addresses><brid:Gender>Male</brid:Gender><brid:AdditionalInfo><brid:InputAdditionalInfo><brid:Number
+        xsi:nil="true"/><brid:Type xsi:nil="true"/></brid:InputAdditionalInfo></brid:AdditionalInfo></brid:Entity></brid:InputRecord></brid:Records></brid:input></brid:Search></soap:Body></soap:Envelope>
     headers:
       Soapaction:
       - '"https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/Search"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '1236'
+      - '1228'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -948,7 +948,7 @@ http_interactions:
       X-Xg5-Version:
       - 5.28.1252.0
       Date:
-      - Thu, 06 Feb 2020 21:03:25 GMT
+      - Fri, 07 Feb 2020 19:41:47 GMT
       Content-Length:
       - '1004'
     body:
@@ -960,12 +960,12 @@ http_interactions:
             <s:Fault>
               <faultcode xmlns:a="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0">a:ServiceFaultFault</faultcode>
               <faultstring xml:lang="en-US">Error in deserializing body of request message for operation 'Search'.
-        There is an error in XML document (1, 1112).
+        There is an error in XML document (1, 1104).
         Instance validation error: '' is not a valid value for AdditionalInfoType.</faultstring>
               <detail>
                 <ServiceFault xmlns="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
                   <Message>Error in deserializing body of request message for operation 'Search'.
-        There is an error in XML document (1, 1112).
+        There is an error in XML document (1, 1104).
         Instance validation error: '' is not a valid value for AdditionalInfoType.</Message>
                   <Type>Error</Type>
                 </ServiceFault>
@@ -974,5 +974,5 @@ http_interactions:
           </s:Body>
         </s:Envelope>
     http_version: null
-  recorded_at: Thu, 06 Feb 2020 21:03:25 GMT
+  recorded_at: Fri, 07 Feb 2020 19:41:46 GMT
 recorded_with: VCR 5.1.0

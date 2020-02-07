@@ -3,6 +3,37 @@
 require 'lexis_nexis/search_attributes_helper'
 
 RSpec.describe LexisNexis::SearchAttributesHelper do
+  describe '#format_input' do
+    let(:input_data) do
+      input_path = File.expand_path("../../fixtures/#{input_data_file}", __FILE__)
+      YAML.load(File.read(input_path))
+    end
+    let(:expected_object) do
+      output_path = File.expand_path("../../fixtures/#{output_data_file}", __FILE__)
+      YAML.load(File.read(output_path))
+    end
+
+    context 'when entity type is business' do
+      let(:entity_type) { 'Business' }
+      let(:input_data_file) { 'example_business_input.yml' }
+      let(:output_data_file) { 'example_business_output.yml' }
+
+      it 'returns an input hash in the correct format' do
+        expect(LexisNexis::SearchAttributesHelper.format_input(entity_type, input_data)).to eq(expected_object)
+      end
+    end
+
+    context 'when entity type is individual' do
+      let(:entity_type) { 'Individual' }
+      let(:input_data_file) { 'example_individual_input.yml' }
+      let(:output_data_file) { 'example_individual_output.yml' }
+
+      it 'returns an input hash in the correct format' do
+        expect(LexisNexis::SearchAttributesHelper.format_input(entity_type, input_data)).to eq(expected_object)
+      end
+    end
+  end
+
   describe '#get_addresses_hash' do
     let(:get_addresses_hash) { LexisNexis::SearchAttributesHelper.get_addresses_hash(addresses) }
 
@@ -89,7 +120,7 @@ RSpec.describe LexisNexis::SearchAttributesHelper do
           city: 'Toronto',
           country: 'Canada',
           postal_code: '123456',
-          address: '123 Sesame Street',
+          address: '123 Sesame Street'
         }
       end
       let(:expected_object) do

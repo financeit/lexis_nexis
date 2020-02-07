@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'lexis_nexis'
+require 'lexis_nexis/search_attributes_helper'
 
 module LexisNexis
   # Class to handle calls to search for an entity
@@ -20,7 +21,7 @@ module LexisNexis
       LexisNexis.send_request(
         LexisNexis.client(LEXIS_NEXIS_WSDL),
         SEARCH_OPERATION,
-        SEARCH_PARAMETERS.merge(LexisNexis::SearchAttributes.format_input(entity_type, input_data))
+        SEARCH_PARAMETERS.merge(LexisNexis::SearchAttributesHelper.format_input(entity_type, input_data))
       )
     end
   end

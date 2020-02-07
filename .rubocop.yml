@@ -8,12 +8,19 @@ AllCops:
 ExpandPathArguments:
   Enabled: false
 
+GuardClause:
+  Exclude: ['lib/lexis_nexis/search_attributes_helper.rb']
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    ['lib/lexis_nexis/search_attributes_helper.rb']
+
 Metrics/LineLength:
   Max: 120
 
 Metrics/MethodLength:
   Exclude:
-    ['lib/lexis_nexis/search_attributes.rb', 'lib/lexis_nexis/search_helper.rb']
+    ['lib/lexis_nexis/search_attributes_helper.rb']
 
 Metrics/BlockLength:
   ExcludedMethods: ['describe', 'context']

@@ -2,7 +2,6 @@
 
 require 'savon'
 require 'lexis_nexis/response'
-require 'lexis_nexis/search_attributes'
 
 # LexisNexis class connects to client with WSDL, sends requests, and handles responses
 # Default endpoint is Search
