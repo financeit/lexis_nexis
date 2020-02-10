@@ -1,0 +1,30 @@
+---
+:name:
+  :full_name: Dunder Mifflin
+:addresses:
+  - :city: Toronto
+    :country: Canada
+    :address: 123 Sesame Street
+    :address_2: Suite 1234
+    :postal_code: 123456
+    :state: Ontario
+    :type: Current
+  - :city: Toronto
+    :country: Canada
+    :address: 456 Sesame Street
+    :address_2: Suite 1234
+    :postal_code: 123456
+    :state: Ontario
+    :type: Mailing
+:ids:
+  - :type: EIN
+    :value: 12345
+  - :type: TaxID
+    :value: 12345
+  - :type: Other
+    :value: 12345
+:phones:
+  - :type: Home
+    :value: 1234567890
+  - :type: Cell
+    :value: 1234567890

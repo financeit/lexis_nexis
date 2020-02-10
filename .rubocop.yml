@@ -1,4 +1,39 @@
 inherit_from: .rubocop_todo.yml
 
 AllCops:
+  Exclude:
+    ['lib/lexis_nexis/business_id.rb', 'spec/lexis_nexis/business_id_spec.rb']
   TargetRubyVersion: 2.4
+
+ExpandPathArguments:
+  Enabled: false
+
+GuardClause:
+  Exclude: ['lib/lexis_nexis/search_attributes_helper.rb']
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    ['lib/lexis_nexis/search_attributes_helper.rb']
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Exclude:
+    ['lib/lexis_nexis/search_attributes_helper.rb']
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
+
+MutableConstant:
+  Exclude:
+    ['lib/lexis_nexis.rb', 'lib/lexis_nexis/search_service.rb']
+
+NumericLiteralPrefix:
+  Enabled: false
+
+NumericLiterals:
+  Enabled: false
+
+StringLiterals:
+  Enabled: false

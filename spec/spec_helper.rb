@@ -3,8 +3,8 @@
 require 'pry'
 require 'savon/mock/spec_helper'
 require 'bundler/setup'
+require 'nokogiri'
 require 'support/vcr_setup'
-require 'lexis_nexis'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -16,4 +16,9 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  # Lexis Nexis Credentials
+  LexisNexis::LEXIS_NEXIS_CLIENT_ID = ''
+  LexisNexis::LEXIS_NEXIS_USERNAME = ''
+  LexisNexis::LEXIS_NEXIS_PASSWORD = ''
 end

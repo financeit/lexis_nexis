@@ -1,0 +1,1513 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?wsdl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xg5-Version:
+      - 5.28.1252.0
+      Date:
+      - Fri, 07 Feb 2020 14:54:01 GMT
+      Content-Length:
+      - '52473'
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="utf-8"?>
+        <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="XGServices" targetNamespace="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0">
+          <wsp:Policy wsu:Id="BasicHttpBinding_IAccount_policy">
+            <wsp:ExactlyOne>
+              <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                  <wsp:Policy>
+                    <sp:TransportToken>
+                      <wsp:Policy>
+                        <sp:HttpsToken RequireClientCertificate="false"/>
+                      </wsp:Policy>
+                    </sp:TransportToken>
+                    <sp:AlgorithmSuite>
+                      <wsp:Policy>
+                        <sp:Basic256/>
+                      </wsp:Policy>
+                    </sp:AlgorithmSuite>
+                    <sp:Layout>
+                      <wsp:Policy>
+                        <sp:Strict/>
+                      </wsp:Policy>
+                    </sp:Layout>
+                  </wsp:Policy>
+                </sp:TransportBinding>
+              </wsp:All>
+            </wsp:ExactlyOne>
+          </wsp:Policy>
+          <wsp:Policy wsu:Id="BasicHttpBinding_IListMaintenance_policy">
+            <wsp:ExactlyOne>
+              <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                  <wsp:Policy>
+                    <sp:TransportToken>
+                      <wsp:Policy>
+                        <sp:HttpsToken RequireClientCertificate="false"/>
+                      </wsp:Policy>
+                    </sp:TransportToken>
+                    <sp:AlgorithmSuite>
+                      <wsp:Policy>
+                        <sp:Basic256/>
+                      </wsp:Policy>
+                    </sp:AlgorithmSuite>
+                    <sp:Layout>
+                      <wsp:Policy>
+                        <sp:Strict/>
+                      </wsp:Policy>
+                    </sp:Layout>
+                  </wsp:Policy>
+                </sp:TransportBinding>
+              </wsp:All>
+            </wsp:ExactlyOne>
+          </wsp:Policy>
+          <wsp:Policy wsu:Id="BasicHttpBinding_IResults_policy">
+            <wsp:ExactlyOne>
+              <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                  <wsp:Policy>
+                    <sp:TransportToken>
+                      <wsp:Policy>
+                        <sp:HttpsToken RequireClientCertificate="false"/>
+                      </wsp:Policy>
+                    </sp:TransportToken>
+                    <sp:AlgorithmSuite>
+                      <wsp:Policy>
+                        <sp:Basic256/>
+                      </wsp:Policy>
+                    </sp:AlgorithmSuite>
+                    <sp:Layout>
+                      <wsp:Policy>
+                        <sp:Strict/>
+                      </wsp:Policy>
+                    </sp:Layout>
+                  </wsp:Policy>
+                </sp:TransportBinding>
+              </wsp:All>
+            </wsp:ExactlyOne>
+          </wsp:Policy>
+          <wsp:Policy wsu:Id="BasicHttpBinding_ISearch_policy">
+            <wsp:ExactlyOne>
+              <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                  <wsp:Policy>
+                    <sp:TransportToken>
+                      <wsp:Policy>
+                        <sp:HttpsToken RequireClientCertificate="false"/>
+                      </wsp:Policy>
+                    </sp:TransportToken>
+                    <sp:AlgorithmSuite>
+                      <wsp:Policy>
+                        <sp:Basic256/>
+                      </wsp:Policy>
+                    </sp:AlgorithmSuite>
+                    <sp:Layout>
+                      <wsp:Policy>
+                        <sp:Strict/>
+                      </wsp:Policy>
+                    </sp:Layout>
+                  </wsp:Policy>
+                </sp:TransportBinding>
+              </wsp:All>
+            </wsp:ExactlyOne>
+          </wsp:Policy>
+          <wsdl:types>
+            <xsd:schema targetNamespace="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/Imports">
+              <xsd:import schemaLocation="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?xsd=xsd0" namespace="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0"/>
+              <xsd:import schemaLocation="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              <xsd:import schemaLocation="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?xsd=xsd2" namespace="http://microsoft.com/wsdl/types/"/>
+            </xsd:schema>
+          </wsdl:types>
+          <wsdl:message name="IAccount_ChangePassword_InputMessage">
+            <wsdl:part name="parameters" element="tns:ChangePassword"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_ChangePassword_OutputMessage">
+            <wsdl:part name="parameters" element="tns:ChangePasswordResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_ChangePassword_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_GetDaysUntilPasswordExpires_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetDaysUntilPasswordExpires"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_GetDaysUntilPasswordExpires_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetDaysUntilPasswordExpiresResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_GetDaysUntilPasswordExpires_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddList_InputMessage">
+            <wsdl:part name="parameters" element="tns:AddList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:AddListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteList_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetList_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_IndexList_InputMessage">
+            <wsdl:part name="parameters" element="tns:IndexList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_IndexList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:IndexListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_IndexList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_MergeDuplicates_InputMessage">
+            <wsdl:part name="parameters" element="tns:MergeDuplicates"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_MergeDuplicates_OutputMessage">
+            <wsdl:part name="parameters" element="tns:MergeDuplicatesResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_MergeDuplicates_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchLists_InputMessage">
+            <wsdl:part name="parameters" element="tns:SearchLists"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchLists_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchListsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchLists_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateList_InputMessage">
+            <wsdl:part name="parameters" element="tns:UpdateList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:UpdateListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddResultRecord_InputMessage">
+            <wsdl:part name="parameters" element="tns:AddResultRecord"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddResultRecord_OutputMessage">
+            <wsdl:part name="parameters" element="tns:AddResultRecordResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddResultRecord_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:AddRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:AddRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchListRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:SearchListRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchListRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchListRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchListRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateRecord_InputMessage">
+            <wsdl:part name="parameters" element="tns:UpdateRecord"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateRecord_OutputMessage">
+            <wsdl:part name="parameters" element="tns:UpdateRecordResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateRecord_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_AddAttachment_InputMessage">
+            <wsdl:part name="parameters" element="tns:AddAttachment"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_AddAttachment_OutputMessage">
+            <wsdl:part name="parameters" element="tns:AddAttachmentResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_AddAttachment_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteAttachment_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteAttachment"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteAttachment_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteAttachmentResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteAttachment_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetAttachment_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetAttachment"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetAttachment_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetAttachmentResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetAttachment_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteResultRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteResultRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteResultRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteResultRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteResultRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetResultRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetResultRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetResultRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetResultRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetResultRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchResultRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:SearchResultRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchResultRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchResultRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchResultRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SetRecordState_InputMessage">
+            <wsdl:part name="parameters" element="tns:SetRecordState"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SetRecordState_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SetRecordStateResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SetRecordState_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteRuns_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteRuns"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteRuns_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteRunsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteRuns_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetRunInfo_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetRunInfo"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetRunInfo_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetRunInfoResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetRunInfo_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchRuns_InputMessage">
+            <wsdl:part name="parameters" element="tns:SearchRuns"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchRuns_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchRunsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchRuns_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_GetDataFileList_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetDataFileList"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_GetDataFileList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetDataFileListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_GetDataFileList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_Search_InputMessage">
+            <wsdl:part name="parameters" element="tns:Search"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_Search_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchResponse"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_Search_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:portType name="IAccount">
+            <wsdl:operation name="ChangePassword">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/ChangePassword" message="tns:IAccount_ChangePassword_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/ChangePasswordResponse" message="tns:IAccount_ChangePassword_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/ChangePasswordServiceFaultFault" name="ServiceFaultFault" message="tns:IAccount_ChangePassword_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetDaysUntilPasswordExpires">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/GetDaysUntilPasswordExpires" message="tns:IAccount_GetDaysUntilPasswordExpires_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/GetDaysUntilPasswordExpiresResponse" message="tns:IAccount_GetDaysUntilPasswordExpires_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/GetDaysUntilPasswordExpiresServiceFaultFault" name="ServiceFaultFault" message="tns:IAccount_GetDaysUntilPasswordExpires_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+          </wsdl:portType>
+          <wsdl:portType name="IListMaintenance">
+            <wsdl:operation name="AddList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddList" message="tns:IListMaintenance_AddList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddListResponse" message="tns:IListMaintenance_AddList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_AddList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteList" message="tns:IListMaintenance_DeleteList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteListResponse" message="tns:IListMaintenance_DeleteList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_DeleteList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetList" message="tns:IListMaintenance_GetList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetListResponse" message="tns:IListMaintenance_GetList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_GetList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="IndexList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/IndexList" message="tns:IListMaintenance_IndexList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/IndexListResponse" message="tns:IListMaintenance_IndexList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/IndexListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_IndexList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="MergeDuplicates">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/MergeDuplicates" message="tns:IListMaintenance_MergeDuplicates_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/MergeDuplicatesResponse" message="tns:IListMaintenance_MergeDuplicates_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/MergeDuplicatesServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_MergeDuplicates_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SearchLists">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchLists" message="tns:IListMaintenance_SearchLists_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListsResponse" message="tns:IListMaintenance_SearchLists_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_SearchLists_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="UpdateList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateList" message="tns:IListMaintenance_UpdateList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateListResponse" message="tns:IListMaintenance_UpdateList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_UpdateList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="AddResultRecord">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddResultRecord" message="tns:IListMaintenance_AddResultRecord_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddResultRecordResponse" message="tns:IListMaintenance_AddResultRecord_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddResultRecordServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_AddResultRecord_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="AddRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddRecords" message="tns:IListMaintenance_AddRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddRecordsResponse" message="tns:IListMaintenance_AddRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_AddRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteRecords" message="tns:IListMaintenance_DeleteRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteRecordsResponse" message="tns:IListMaintenance_DeleteRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_DeleteRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetRecords" message="tns:IListMaintenance_GetRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetRecordsResponse" message="tns:IListMaintenance_GetRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_GetRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SearchListRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListRecords" message="tns:IListMaintenance_SearchListRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListRecordsResponse" message="tns:IListMaintenance_SearchListRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_SearchListRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="UpdateRecord">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateRecord" message="tns:IListMaintenance_UpdateRecord_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateRecordResponse" message="tns:IListMaintenance_UpdateRecord_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateRecordServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_UpdateRecord_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+          </wsdl:portType>
+          <wsdl:portType name="IResults">
+            <wsdl:operation name="AddAttachment">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/AddAttachment" message="tns:IResults_AddAttachment_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/AddAttachmentResponse" message="tns:IResults_AddAttachment_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/AddAttachmentServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_AddAttachment_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteAttachment">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteAttachment" message="tns:IResults_DeleteAttachment_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteAttachmentResponse" message="tns:IResults_DeleteAttachment_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteAttachmentServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_DeleteAttachment_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetAttachment">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetAttachment" message="tns:IResults_GetAttachment_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetAttachmentResponse" message="tns:IResults_GetAttachment_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetAttachmentServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_GetAttachment_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteResultRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteResultRecords" message="tns:IResults_DeleteResultRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteResultRecordsResponse" message="tns:IResults_DeleteResultRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteResultRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_DeleteResultRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetResultRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetResultRecords" message="tns:IResults_GetResultRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetResultRecordsResponse" message="tns:IResults_GetResultRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetResultRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_GetResultRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SearchResultRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchResultRecords" message="tns:IResults_SearchResultRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchResultRecordsResponse" message="tns:IResults_SearchResultRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchResultRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_SearchResultRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SetRecordState">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SetRecordState" message="tns:IResults_SetRecordState_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SetRecordStateResponse" message="tns:IResults_SetRecordState_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SetRecordStateServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_SetRecordState_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteRuns">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteRuns" message="tns:IResults_DeleteRuns_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteRunsResponse" message="tns:IResults_DeleteRuns_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteRunsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_DeleteRuns_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetRunInfo">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetRunInfo" message="tns:IResults_GetRunInfo_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetRunInfoResponse" message="tns:IResults_GetRunInfo_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetRunInfoServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_GetRunInfo_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SearchRuns">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchRuns" message="tns:IResults_SearchRuns_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchRunsResponse" message="tns:IResults_SearchRuns_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchRunsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_SearchRuns_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+          </wsdl:portType>
+          <wsdl:portType name="ISearch">
+            <wsdl:operation name="GetDataFileList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/GetDataFileList" message="tns:ISearch_GetDataFileList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/GetDataFileListResponse" message="tns:ISearch_GetDataFileList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/GetDataFileListServiceFaultFault" name="ServiceFaultFault" message="tns:ISearch_GetDataFileList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="Search">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/Search" message="tns:ISearch_Search_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/SearchResponse" message="tns:ISearch_Search_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/SearchServiceFaultFault" name="ServiceFaultFault" message="tns:ISearch_Search_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+          </wsdl:portType>
+          <wsdl:binding name="BasicHttpBinding_IAccount" type="tns:IAccount">
+            <wsp:PolicyReference URI="#BasicHttpBinding_IAccount_policy"/>
+            <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="ChangePassword">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/ChangePassword" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetDaysUntilPasswordExpires">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/GetDaysUntilPasswordExpires" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+          </wsdl:binding>
+          <wsdl:binding name="BasicHttpBinding_IListMaintenance" type="tns:IListMaintenance">
+            <wsp:PolicyReference URI="#BasicHttpBinding_IListMaintenance_policy"/>
+            <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="AddList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="IndexList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/IndexList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="MergeDuplicates">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/MergeDuplicates" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SearchLists">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchLists" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="UpdateList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="AddResultRecord">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddResultRecord" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="AddRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SearchListRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="UpdateRecord">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateRecord" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+          </wsdl:binding>
+          <wsdl:binding name="BasicHttpBinding_IResults" type="tns:IResults">
+            <wsp:PolicyReference URI="#BasicHttpBinding_IResults_policy"/>
+            <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="AddAttachment">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/AddAttachment" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteAttachment">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteAttachment" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetAttachment">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetAttachment" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteResultRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteResultRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetResultRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetResultRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SearchResultRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchResultRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SetRecordState">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SetRecordState" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteRuns">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteRuns" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetRunInfo">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetRunInfo" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SearchRuns">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchRuns" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+          </wsdl:binding>
+          <wsdl:binding name="BasicHttpBinding_ISearch" type="tns:ISearch">
+            <wsp:PolicyReference URI="#BasicHttpBinding_ISearch_policy"/>
+            <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="GetDataFileList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/GetDataFileList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="Search">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/Search" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+          </wsdl:binding>
+          <wsdl:service name="XGServices">
+            <wsdl:port name="BasicHttpBinding_IAccount" binding="tns:BasicHttpBinding_IAccount">
+              <soap:address location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Account"/>
+            </wsdl:port>
+            <wsdl:port name="BasicHttpBinding_IListMaintenance" binding="tns:BasicHttpBinding_IListMaintenance">
+              <soap:address location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/ListMaintenance"/>
+            </wsdl:port>
+            <wsdl:port name="BasicHttpBinding_IResults" binding="tns:BasicHttpBinding_IResults">
+              <soap:address location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Results"/>
+            </wsdl:port>
+            <wsdl:port name="BasicHttpBinding_ISearch" binding="tns:BasicHttpBinding_ISearch">
+              <soap:address location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search"/>
+            </wsdl:port>
+          </wsdl:service>
+        </wsdl:definitions>
+    http_version: null
+  recorded_at: Fri, 07 Feb 2020 14:54:01 GMT
+- request:
+    method: post
+    uri: https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:brid="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0"
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><brid:Search><brid:context><brid:ClientID><CLIENT_ID></brid:ClientID><brid:Password><PASSWORD></brid:Password><brid:UserID><USERNAME></brid:UserID></brid:context><brid:config><brid:PredefinedSearchName>Borrower
+        Onboarding</brid:PredefinedSearchName></brid:config><brid:input><brid:Records><brid:InputRecord><brid:Entity><brid:EntityType>Individual</brid:EntityType><brid:Name><brid:First>Donald</brid:First><brid:Last>Trump</brid:Last><brid:Full>Donald
+        Trump</brid:Full></brid:Name><brid:Addresses><brid:InputAddress><brid:Country>United
+        States</brid:Country><brid:Type>Current</brid:Type></brid:InputAddress></brid:Addresses><brid:Gender>Male</brid:Gender><brid:AdditionalInfo><brid:InputAdditionalInfo><brid:Number>1946-06-14</brid:Number><brid:Type>DOB</brid:Type></brid:InputAdditionalInfo></brid:AdditionalInfo></brid:Entity></brid:InputRecord></brid:Records></brid:input></brid:Search></soap:Body></soap:Envelope>
+    headers:
+      Soapaction:
+      - '"https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/Search"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '1235'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/xml; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xg5-Version:
+      - 5.28.1252.0
+      Date:
+      - Fri, 07 Feb 2020 14:54:02 GMT
+      Content-Length:
+      - '51487'
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"?>\n<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
+        \ <s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n
+        \   <SearchResponse xmlns=\"https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0\">\n
+        \     <SearchResult>\n        <Records>\n          <ResultRecord>\n            <Record>1</Record>\n
+        \           <RecordDetails>\n              <AcceptListID>-1</AcceptListID>\n
+        \             <AccountAmount/>\n              <AccountDate/>\n              <AccountGroupID/>\n
+        \             <AccountOtherData/>\n              <AccountProviderID/>\n              <AccountType/>\n
+        \             <AddedToAcceptList>false</AddedToAcceptList>\n              <Addresses>\n
+        \               <InputAddress>\n                  <Country>United States</Country>\n
+        \                 <Type>Current</Type>\n                </InputAddress>\n
+        \             </Addresses>\n              <DPPA>NA</DPPA>\n              <EFTContext/>\n
+        \             <EFTType>None</EFTType>\n              <EntityType>Individual</EntityType>\n
+        \             <Gender>Male</Gender>\n              <GLB>255</GLB>\n              <LastUpdatedDate>2020-02-07T14:54:02.1124282Z</LastUpdatedDate>\n
+        \             <Name>\n                <First>Donald</First>\n                <Full>Donald
+        Trump</Full>\n                <Generation/>\n                <Last>Trump</Last>\n
+        \               <Middle/>\n                <Title/>\n              </Name>\n
+        \             <RecordState>\n                <AddedToAcceptList>false</AddedToAcceptList>\n
+        \               <AlertState>Unassigned</AlertState>\n                <AssignmentType>Unknown</AssignmentType>\n
+        \               <MatchStates>\n                  <WatchlistMatchState>\n                    <MatchID>0</MatchID>\n
+        \                   <Type>None</Type>\n                  </WatchlistMatchState>\n
+        \                 <WatchlistMatchState>\n                    <MatchID>0</MatchID>\n
+        \                   <Type>None</Type>\n                  </WatchlistMatchState>\n
+        \                 <WatchlistMatchState>\n                    <MatchID>0</MatchID>\n
+        \                   <Type>None</Type>\n                  </WatchlistMatchState>\n
+        \               </MatchStates>\n                <Status/>\n              </RecordState>\n
+        \             <SearchDate>2020-02-07T14:54:02.1124282Z</SearchDate>\n              <Text/>\n
+        \           </RecordDetails>\n            <ResultID>-1</ResultID>\n            <RunID>-1</RunID>\n
+        \           <Watchlist>\n              <Matches>\n                <WLMatch>\n
+        \                 <AcceptListID>-1</AcceptListID>\n                  <AddedToAcceptList>false</AddedToAcceptList>\n
+        \                 <AddressName>false</AddressName>\n                  <AutoFalsePositive>false</AutoFalsePositive>\n
+        \                 <BestAddressIsPartial>false</BestAddressIsPartial>\n                  <BestCountry/>\n
+        \                 <BestCountryScore>-1</BestCountryScore>\n                  <BestCountryType>None</BestCountryType>\n
+        \                 <BestDOBIsPartial>false</BestDOBIsPartial>\n                  <BestName>Trump,
+        Donald John III</BestName>\n                  <BestNameScore>94</BestNameScore>\n
+        \                 <CheckSum>150360</CheckSum>\n                  <Conflicts>\n
+        \                   <AddressConflict>false</AddressConflict>\n                    <CitizenshipConflict>false</CitizenshipConflict>\n
+        \                   <CountryConflict>false</CountryConflict>\n                    <DOBConflict>false</DOBConflict>\n
+        \                   <EntityTypeConflict>false</EntityTypeConflict>\n                    <GenderConflict>false</GenderConflict>\n
+        \                   <IDConflict>false</IDConflict>\n                    <PhoneConflict>false</PhoneConflict>\n
+        \                 </Conflicts>\n                  <EntityDetails>\n                    <AdditionalInfo>\n
+        \                     <EntityAdditionalInfo>\n                        <ID>0</ID>\n
+        \                       <Type>DOB</Type>\n                        <Value>2009-02-XX</Value>\n
+        \                     </EntityAdditionalInfo>\n                      <EntityAdditionalInfo>\n
+        \                       <ID>0</ID>\n                        <Type>Occupation</Type>\n
+        \                       <Value>Grandson of Donald John Trump, Sr., President
+        of the United States.</Value>\n                      </EntityAdditionalInfo>\n
+        \                     <EntityAdditionalInfo>\n                        <Comments>Trump,
+        Donald John | https://members.worldcompliance.com/metawatch2.aspx?id=a89401ed-2199-4175-bc52-cb8a553ba357</Comments>\n
+        \                       <ID>0</ID>\n                        <Type>Other</Type>\n
+        \                       <Value>Link to WorldCompliance Online Database</Value>\n
+        \                     </EntityAdditionalInfo>\n                      <EntityAdditionalInfo>\n
+        \                       <Comments>http://www.dailymail.co.uk/news/article-4090750/Back-business-Donald-Trump-Jr-shares-cute-photo-President-elect-cuddling-grandson-plane-home-Florida-vacation.html
+        | http://www.dailymail.co.uk/news/article-4047708/Happy-10th-annual-29th-birthday-Donald-Trump-Jr-celebrates-wife-s-39th-charming-picture-bikini-poses-five-children-beach.html
+        | http://www.nndb.com/people/305/000403093/ | https://www.earnthenecklace.com/donald-trump-jrs-net-worth-what-is-donald-trump-jr-worth/
+        | https://www.elitedaily.com/news/politics/donald-trump-jr-s-wife-shows-hes-really-following-fathers-footsteps/2014368
+        | http://www.kansascity.com/news/politics-government/article121751573.html
+        | https://www.usmagazine.com/celebrity-moms/news/donald-trump-jr-and-wife-vanessa-welcome-their-fifth-child-2014186/
+        | https://www.aol.com/article/news/2017/03/20/how-many-grandkids-does-president-trump-have-look-at-next-generation/21903551/
+        | http://frostsnow.com/vanessa-trump-s-married-life-with-husband-trump-jr-with-5-kids-see-their-relationship
+        | http://www.mirror.co.uk/news/world-news/first-family-trump-family-tree-9639388
+        | http://www.ibtimes.com/who-vanessa-trump-wife-donald-trump-jr-former-model-who-once-dated-leonardo-dicaprio-2476451
+        | http://www.usmagazine.com/celebrity-moms/news/vanessa-donald-trump-jr-welcome-baby-boy-tristan-2011310
+        | http://www.dailymail.co.uk/news/article-4141310/Trump-signs-executive-orders-grandchildren.html
+        | http://heavy.com/news/2016/02/donald-trump-jr-junior-wife-vanessa-haydon-model-children-age-photos-bio-married-kids/
+        | http://www.mirror.co.uk/3am/celebrity-news/who-first-family-donald-trump-9227040
+        | http://www.dailymail.co.uk/news/article-3776889/Swapping-campaign-trail-school-run-Donald-Trump-Jr-walks-wife-Vanessa-five-children-day-classes-telling-talk-Hillary-s-health-fair-game.html
+        | http://time.com/3990496/donald-trump-children/</Comments>\n                        <ID>0</ID>\n
+        \                       <Type>Other</Type>\n                        <Value>Sources
+        of Record Information</Value>\n                      </EntityAdditionalInfo>\n
+        \                   </AdditionalInfo>\n                    <Addresses>\n                      <EntityAddress>\n
+        \                       <Country>United States</Country>\n                        <ID>0</ID>\n
+        \                       <Type>Unknown</Type>\n                      </EntityAddress>\n
+        \                   </Addresses>\n                    <Comments>Source: International,Website
+        || Level: National | Category: PEP | Subcategory: Family Member || Associations:
+        | Father (PEP:Family Member): Trump, Donald John, 2537467 | Mother (PEP:Family
+        Member): Haydon Trump, Vanessa, 7646920 | Grandfather (PEP:Govt Branch Member):
+        Trump, Donald John, 1930191 || Last updated: 2018-03-13</Comments>\n                    <DateListed>2016-11-10</DateListed>\n
+        \                   <EntityType>Individual</EntityType>\n                    <Gender>Male</Gender>\n
+        \                   <IDs>\n                      <EntityID>\n                        <ID>0</ID>\n
+        \                       <Number>7646989</Number>\n                        <Type>ProprietaryUID</Type>\n
+        \                     </EntityID>\n                    </IDs>\n                    <ListReferenceNumber>7646989</ListReferenceNumber>\n
+        \                   <Name>\n                      <First>Donald John</First>\n
+        \                     <Full>Donald John Trump III</Full>\n                      <Generation>III</Generation>\n
+        \                     <Last>Trump</Last>\n                    </Name>\n                    <ReasonListed>National:PEP:Family
+        Member</ReasonListed>\n                  </EntityDetails>\n                  <EntityName>Trump,
+        Donald John III</EntityName>\n                  <EntityScore>94</EntityScore>\n
+        \                 <EntityUniqueID>WX0007646989</EntityUniqueID>\n                  <FalsePositive>false</FalsePositive>\n
+        \                 <File>\n                    <Build>2020-02-06T12:15:28Z</Build>\n
+        \                   <Custom>false</Custom>\n                    <ID>411085</ID>\n
+        \                   <Name>WorldCompliance - Full.BDF</Name>\n                    <Published>2020-02-05T00:01:00Z</Published>\n
+        \                   <Type>BDF</Type>\n                  </File>\n                  <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>\n
+        \                 <ID>-1</ID>\n                  <MatchReAlert>false</MatchReAlert>\n
+        \                 <MatchXML>\n                    <Gender>\n                      <Input>Male</Input>\n
+        \                     <List>Male</List>\n                      <Score>100</Score>\n
+        \                   </Gender>\n                  </MatchXML>\n                  <PreviousResultID>-1</PreviousResultID>\n
+        \                 <ReasonListed>National:PEP:Family Member</ReasonListed>\n
+        \                 <ResultDate>2020-02-07T14:54:02.1114281Z</ResultDate>\n
+        \                 <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>\n
+        \                 <TrueMatch>false</TrueMatch>\n                </WLMatch>\n
+        \               <WLMatch>\n                  <AcceptListID>-1</AcceptListID>\n
+        \                 <AddedToAcceptList>false</AddedToAcceptList>\n                  <AddressName>false</AddressName>\n
+        \                 <AutoFalsePositive>false</AutoFalsePositive>\n                  <BestAddressIsPartial>false</BestAddressIsPartial>\n
+        \                 <BestCountry/>\n                  <BestCountryScore>-1</BestCountryScore>\n
+        \                 <BestCountryType>None</BestCountryType>\n                  <BestDOBIsPartial>false</BestDOBIsPartial>\n
+        \                 <BestName>Trump, Donald John Jr.</BestName>\n                  <BestNameScore>94</BestNameScore>\n
+        \                 <CheckSum>309143</CheckSum>\n                  <Conflicts>\n
+        \                   <AddressConflict>false</AddressConflict>\n                    <CitizenshipConflict>false</CitizenshipConflict>\n
+        \                   <CountryConflict>false</CountryConflict>\n                    <DOBConflict>false</DOBConflict>\n
+        \                   <EntityTypeConflict>false</EntityTypeConflict>\n                    <GenderConflict>false</GenderConflict>\n
+        \                   <IDConflict>false</IDConflict>\n                    <PhoneConflict>false</PhoneConflict>\n
+        \                 </Conflicts>\n                  <EntityDetails>\n                    <AdditionalInfo>\n
+        \                     <EntityAdditionalInfo>\n                        <ID>0</ID>\n
+        \                       <Type>DOB</Type>\n                        <Value>1977-12-XX</Value>\n
+        \                     </EntityAdditionalInfo>\n                      <EntityAdditionalInfo>\n
+        \                       <ID>0</ID>\n                        <Type>Occupation</Type>\n
+        \                       <Value>Son of Donald John Trump, President of the
+        United States.</Value>\n                      </EntityAdditionalInfo>\n                      <EntityAdditionalInfo>\n
+        \                       <Comments>Trump, Donald John | https://members.worldcompliance.com/metawatch2.aspx?id=0029020e-dfe0-4433-a057-6b35742f1036</Comments>\n
+        \                       <ID>0</ID>\n                        <Type>Other</Type>\n
+        \                       <Value>Link to WorldCompliance Online Database</Value>\n
+        \                     </EntityAdditionalInfo>\n                      <EntityAdditionalInfo>\n
+        \                       <Comments>https://edition.cnn.com/2019/11/07/politics/trump-settlement-trump-foundation-new-york/index.html
+        | https://thehill.com/homenews/administration/469540-trump-hits-political-hacks-in-new-york-after-settling-trump
+        | https://ag.ny.gov/press-release/2019/ag-james-secures-court-order-against-donald-j-trump-trump-children-and-trump
+        | https://www.nytimes.com/2018/06/14/nyregion/trump-foundation-lawsuit-attorney-general.html
+        | https://www.cnbc.com/2018/06/14/new-york-attorney-general-sues-trump-and-family-over-charity.html
+        | https://ag.ny.gov/sites/default/files/court_stamped_petition.pdf | https://ag.ny.gov/press-release/attorney-general-underwood-announces-lawsuit-against-donald-j-trump-foundation-and-its
+        | http://www.nndb.com/people/305/000403093/ | http://www.independent.co.uk/news/world/americas/us-elections/donald-trump-white-house-design-what-to-expect-presidential-election-2016-a7395261.html
+        | http://www.huffingtonpost.com/the-six-pack/the-six-pack-donald-trump-jr_b_1348643.html?ir=India&amp;adsSiteOverride=in
+        | http://www.businessinsider.in/THE-TRUMP-5-Meet-the-fabulous-offspring-of-GOP-presidential-candidate-Donald-Trump/articleshow/47962879.cms
+        | http://www.dailymail.co.uk/news/article-3127108/Donald-Trump-s-five-children-steal-spotlight-2016-announcement-nine-year-old-Barron-looking-especially-smart.html
+        | http://www.thewrap.com/tv/column-post/donald-trump-sued-over-failed-mexican-resort-26578/
+        | http://www.nytimes.com/2000/08/11/classified/paid-notice-deaths-trump-mary-a.html
+        | http://www.nytimes.com/1999/06/29/classified/paid-notice-deaths-trump-fred-c.html?scp=3&amp;sq=Fred%20C.%20Trump&amp;st=cse
+        | http://www.nndb.com/people/363/000022297/</Comments>\n                        <ID>0</ID>\n
+        \                       <Type>Other</Type>\n                        <Value>Sources
+        of Record Information</Value>\n                      </EntityAdditionalInfo>\n
+        \                     <EntityAdditionalInfo>\n                        <ID>0</ID>\n
+        \                       <Type>PlaceOfBirth</Type>\n                        <Value>New
+        York City, New York, United States</Value>\n                      </EntityAdditionalInfo>\n
+        \                   </AdditionalInfo>\n                    <Addresses>\n                      <EntityAddress>\n
+        \                       <Country>United States</Country>\n                        <ID>0</ID>\n
+        \                       <Type>Unknown</Type>\n                      </EntityAddress>\n
+        \                   </Addresses>\n                    <AKAs>\n                      <EntityAKA>\n
+        \                       <Category>Weak</Category>\n                        <ID>0</ID>\n
+        \                       <Name>\n                          <Full>Don</Full>\n
+        \                       </Name>\n                        <Type>AKA</Type>\n
+        \                     </EntityAKA>\n                    </AKAs>\n                    <Comments>Source:
+        United States,US-New York State Attorney General || Level: National | Category:
+        PEP | Subcategory: Family Member || Associations: | Wife (PEP:Family Member):
+        Haydon Trump, Vanessa, 7646920 | Son (PEP:Family Member): Trump, Donald John,
+        7646989 | Son (PEP:Family Member): Trump, Spencer Frederick, 7647052 | Son
+        (PEP:Family Member): Trump, Tristan Milos, 7647025 | Daughter (PEP:Family
+        Member): Trump, Chloe Sophia, 7647088 | Daughter (PEP:Family Member): Trump,
+        Kai Madison, 7646953 | Father (PEP:Govt Branch Member): Trump, Donald John,
+        1930191 | Mother (PEP:Family Member): Trump, Ivana, 7619196 | Brother (PEP:Family
+        Member): Trump, Barron William, 2537480 | Brother (PEP:Family Member): Trump,
+        Eric Fredrick, 2537479 | Sister (PEP:Govt Branch Member): Trump, Ivanka Marie,
+        2537485 | Sister (PEP:Family Member): Trump, Tiffany Ariana, 2537486 | Brother-in-law
+        (PEP:Govt Branch Member): Kushner, Jared Corey, 7457246 | Uncle (PEP:Former
+        PEP): Grau, James Walter, 2537532 | Uncle (PEP:Family Member): Trump, Robert
+        S, 2537517 | Aunt (PEP:Courts): Trump Barry, Maryanne, 73874 | Aunt (PEP:Family
+        Member): Trump Grau, Elizabeth Joan, 2537536 | Nephew (PEP:Family Member):
+        Kushner, Joseph Frederick, 7647332 | Nephew (PEP:Family Member): Kushner,
+        Theodore James, 7647356 | Niece (PEP:Family Member): Kushner, Arabella Rose,
+        7647309 | Grandfather (PEP:Family Member): Trump, Frederick Christ, 7645924
+        | Relative (PEP:Family Member): Trump, Melania, 2537468 | Affiliated Company
+        (Enforcement:Fraud): Donald J. Trump Foundation, 7549519 || Last updated:
+        2019-11-08 || Profile Notes: According to the US-New York State Attorney General;
+        November 7, 2019:  Donald J. Trump was ordered to pay USD 2,000,000 in damages
+        for improperly using charitable assets to intervene in the 2016 presidential
+        primaries and further his own political interests. The award is part of Attorney
+        General James&#x2019; lawsuit against the Donald J. Trump Foundation and its
+        directors, Trump, Donald Trump Jr., Ivanka Trump, and Eric Trump. \n\nAs part
+        of the settlement Trump Foundation and its directors to resolve the remaining
+        claims in the lawsuit. Trump admits to personally misusing funds at the Trump
+        Foundation, and agrees to restrictions on future charitable service and ongoing
+        reporting to the Office of the Attorney General in the event he creates a
+        new charity. The settlements also include mandatory training requirements
+        for Donald Trump Jr., Ivanka Trump, and Eric Trump. Finally, the settlements
+        name the charities that will receive the remaining assets of the Trump Foundation
+        as part of its dissolution.\n\nAccording to the US-New York State Attorney
+        General; June 14, 2018: On June 14, 2018, a lawsuit was filed against Donald
+        J. Trump, Jr., Donald J. Trump Foundation and its directors for extensive
+        and persistent violations of State and Federal law. The complaint alleges
+        a pattern of persistent illegal conduct, occurring over more than a decade
+        that includes extensive unlawful political coordination with the Trump presidential
+        campaign, repeated and willful self-dealing transactions to benefit his father,
+        Donald J. Trump&#x2018;s personal and business interests, and violations of
+        basic legal obligations for non-profit foundations.</Comments>\n                    <DateListed>2012-03-16</DateListed>\n
+        \                   <EntityType>Individual</EntityType>\n                    <Gender>Male</Gender>\n
+        \                   <IDs>\n                      <EntityID>\n                        <ID>0</ID>\n
+        \                       <Number>2537467</Number>\n                        <Type>ProprietaryUID</Type>\n
+        \                     </EntityID>\n                    </IDs>\n                    <ListReferenceNumber>2537467</ListReferenceNumber>\n
+        \                   <Name>\n                      <First>Donald John</First>\n
+        \                     <Full>Donald John Trump Jr.</Full>\n                      <Generation>Jr.</Generation>\n
+        \                     <Last>Trump</Last>\n                    </Name>\n                    <ReasonListed>National:PEP:Family
+        Member</ReasonListed>\n                  </EntityDetails>\n                  <EntityName>Trump,
+        Donald John Jr.</EntityName>\n                  <EntityScore>94</EntityScore>\n
+        \                 <EntityUniqueID>WX0002537467</EntityUniqueID>\n                  <FalsePositive>false</FalsePositive>\n
+        \                 <File>\n                    <Build>2020-02-06T12:15:28Z</Build>\n
+        \                   <Custom>false</Custom>\n                    <ID>411085</ID>\n
+        \                   <Name>WorldCompliance - Full.BDF</Name>\n                    <Published>2020-02-05T00:01:00Z</Published>\n
+        \                   <Type>BDF</Type>\n                  </File>\n                  <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>\n
+        \                 <ID>-1</ID>\n                  <MatchReAlert>false</MatchReAlert>\n
+        \                 <MatchXML>\n                    <Gender>\n                      <Input>Male</Input>\n
+        \                     <List>Male</List>\n                      <Score>100</Score>\n
+        \                   </Gender>\n                  </MatchXML>\n                  <PreviousResultID>-1</PreviousResultID>\n
+        \                 <ReasonListed>National:PEP:Family Member</ReasonListed>\n
+        \                 <ResultDate>2020-02-07T14:54:02.1114281Z</ResultDate>\n
+        \                 <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>\n
+        \                 <TrueMatch>false</TrueMatch>\n                </WLMatch>\n
+        \               <WLMatch>\n                  <AcceptListID>-1</AcceptListID>\n
+        \                 <AddedToAcceptList>false</AddedToAcceptList>\n                  <AddressName>false</AddressName>\n
+        \                 <AutoFalsePositive>false</AutoFalsePositive>\n                  <BestAddressIsPartial>false</BestAddressIsPartial>\n
+        \                 <BestCountry/>\n                  <BestCountryScore>-1</BestCountryScore>\n
+        \                 <BestCountryType>None</BestCountryType>\n                  <BestDOBIsPartial>false</BestDOBIsPartial>\n
+        \                 <BestName>Trump, Donald John Sr</BestName>\n                  <BestNameScore>94</BestNameScore>\n
+        \                 <CheckSum>1427951</CheckSum>\n                  <Conflicts>\n
+        \                   <AddressConflict>false</AddressConflict>\n                    <CitizenshipConflict>false</CitizenshipConflict>\n
+        \                   <CountryConflict>false</CountryConflict>\n                    <DOBConflict>false</DOBConflict>\n
+        \                   <EntityTypeConflict>false</EntityTypeConflict>\n                    <GenderConflict>false</GenderConflict>\n
+        \                   <IDConflict>false</IDConflict>\n                    <PhoneConflict>false</PhoneConflict>\n
+        \                 </Conflicts>\n                  <EntityDetails>\n                    <AdditionalInfo>\n
+        \                     <EntityAdditionalInfo>\n                        <ID>0</ID>\n
+        \                       <Type>DOB</Type>\n                        <Value>1946-06-XX</Value>\n
+        \                     </EntityAdditionalInfo>\n                      <EntityAdditionalInfo>\n
+        \                       <Comments>Starting 2017 Ending 2021</Comments>\n                        <ID>0</ID>\n
+        \                       <Type>Occupation</Type>\n                        <Value>President
+        of the United States (January 20, 2017 - January 20, 2021). Under Investigation
+        for Corruption - March 01, 2019.</Value>\n                      </EntityAdditionalInfo>\n
+        \                     <EntityAdditionalInfo>\n                        <Comments>Trump,
+        Donald John | https://members.worldcompliance.com/metawatch2.aspx?id=bd3cd643-715a-4e6c-a8f5-3e0d00e7568b</Comments>\n
+        \                       <ID>0</ID>\n                        <Type>Other</Type>\n
+        \                       <Value>Link to WorldCompliance Online Database</Value>\n
+        \                     </EntityAdditionalInfo>\n                      <EntityAdditionalInfo>\n
+        \                       <ID>0</ID>\n                        <Type>Other</Type>\n
+        \                       <Value>Negative News Alert</Value>\n                      </EntityAdditionalInfo>\n
+        \                     <EntityAdditionalInfo>\n                        <Comments>https://www.foxnews.com/politics/house-transmits-articles-of-impeachment-to-senate
+        | https://www.bbc.com/news/world-us-canada-51126431 | https://www.nytimes.com/2019/12/18/us/politics/trump-impeached.html
+        | https://www.reuters.com/article/us-usa-trump-impeachment-nextsteps-factb/factbox-trump-impeachment-what-happens-next-idUSKBN1YL2ML
+        | https://apnews.com/bb81279725b6f810d5792502254f2f88 | https://thehill.com/homenews/senate/470850-schumer-calls-on-trump-to-testify-as-part-of-impeachment-inquiry
+        | https://edition.cnn.com/2019/11/07/politics/trump-settlement-trump-foundation-new-york/index.html
+        | https://thehill.com/homenews/administration/469540-trump-hits-political-hacks-in-new-york-after-settling-trump
+        | https://ag.ny.gov/press-release/2019/ag-james-secures-court-order-against-donald-j-trump-trump-children-and-trump
+        | https://www.bbc.com/news/world-us-canada-47444361 | https://www.ndtv.com/world-news/us-lawmakers-to-probe-donald-trump-for-corruption-and-abuse-of-power-2002126
+        | http://nymag.com/intelligencer/2019/03/judiciary-probes-trumps-alleged-corruption-and-obstruction.html
+        | https://abcnews.go.com/Politics/house-democrats-launch-wide-ranging-obstruction-justice-probe/story?id=61457750
+        | https://www.chinatimes.com/realtimenews/20181214004221-260408 | https://www.cnbc.com/2018/12/13/trump-inauguration-spending-under-criminal-investigation-by-federal-prosecutors-dow-jones.html
+        | https://www.nytimes.com/interactive/2018/10/02/us/politics/donald-trump-tax-schemes-fred-trump.html
+        | https://www.theguardian.com/us-news/2018/oct/02/trump-helped-parents-hide-money-on-tax-returns-new-york-times
+        | http://time.com/5413841/new-york-state-tax-trump/ | https://www.wsj.com/articles/new-york-tax-department-reviewing-allegations-of-trump-family-transactions-1538526907
+        | https://www.nbcnews.com/politics/politics-news/new-york-state-tax-dept-reviewing-claims-about-trump-times-n916076
+        | https://www.cnbc.com/2018/10/02/new-york-state-tax-department-reviewing-fraud-allegations-involving-trump-in-nyt-article.html
+        | https://www.voanews.com/a/media-report-trump-built-fortune-via-tax-fraud/4597006.html
+        | https://www.bbc.com/news/world-us-canada-44486250 | https://www.nytimes.com/2018/06/14/nyregion/trump-foundation-lawsuit-attorney-general.html
+        | https://www.cnbc.com/2018/06/14/new-york-attorney-general-sues-trump-and-family-over-charity.html
+        | https://ag.ny.gov/sites/default/files/court_stamped_petition.pdf | https://ag.ny.gov/press-release/attorney-general-underwood-announces-lawsuit-against-donald-j-trump-foundation-and-its
+        | http://www.aljazeera.net/news/international/2018/3/10/&#xE01A;&#xE01A;&#xE01A;&#xE01A;&#xE01A;-&#xE01A;&#xE01A;&#xE01A;&#xE01A;&#xE01A;&#xE01A;-&#xE01A;&#xE01A;&#xE01A;&#xE01A;-&#xE01A;&#xE01A;&#xE01A;&#xE01A;-&#xE01A;&#xE01A;-&#xE01A;&#xE01A;&#xE01A;&#xE01A;&#xE01A;-&#xE01A;&#xE01A;-&#xE01A;&#xE01A;&#xE01A;&#xE01A;&#xE01A;&#xE01A;
+        | https://www.nbcnews.com/business/business-news/judge-approves-25-million-settlement-trump-university-lawsuit-n741201
+        | http://msnbcmedia.msn.com/i/TODAY/z_Creative/17-55635_Documents.pdf | https://www.nbcnews.com/politics/white-house/federal-court-approves-25-million-trump-university-settlement-n845181
+        | https://www.nato.int/cps/en/natolive/who_is_who_50012.htm | https://www.vox.com/policy-and-politics/2017/10/26/16526922/harvey-weinstein-donald-trump-sexual-harassment
+        | https://www.theguardian.com/world/2017/nov/11/putin-and-trump-want-political-solution-to-syria-conflict-kremlin-says
+        | https://www.whitehouse.gov/administration/president-trump | https://www.whitehouse.gov/1600/Presidents
+        | http://www.ourcampaigns.com/CandidateDetail.html?CandidateID=17830 | https://votesmart.org/candidate/biography/15723/donald-trump#.WXhUx4SGO00
+        | http://www.marylandattorneygeneral.gov/pages/emoluments/dc_v_trump.pdf |
+        http://www.marylandattorneygeneral.gov/press/2017/061217.pdf | https://ballotpedia.org/Donald_Trump
+        | http://edition.cnn.com/2017/01/20/politics/donald-trump-inauguration-world-reaction/index.html
+        | http://www.aljazeera.com/news/2017/01/donald-trump-sworn-president-170120163850452.html
+        | https://www.theguardian.com/world/2017/jan/19/donald-trump-inauguration-address-womens-march-on-washington-protest-democrats
+        | http://www.oregonlive.com/today/index.ssf/2017/01/even_before_taking_office_dona.html
+        | http://www.reuters.com/article/us-usa-trump-idUSKBN1532T3 | http://time.com/4639125/donald-trump-arrives-in-washington/
+        | http://www.telegraph.co.uk/news/0/donald-trumps-presidential-inauguration/
+        | http://dt.ua/WORLD/tramp-zaplatit-25-mln-dol-za-shahraystvo-yogo-universitetu-225043_.html
+        | http://www.cnbc.com/2016/11/18/president-elect-donald-trump-nearing-settlement-in-trump-university-case-source.html
+        | https://www.washingtonpost.com/politics/source-trump-nearing-settlement-in-trump-university-fraud-cases/2016/11/18/8dc047c0-ada0-11e6-a31b-4b6397e625d0_story.html
+        | http://www.ag.ny.gov/press-release/statement-ag-schneiderman-25-million-settlement-agreement-reached-trump-university
+        | http://www.nytimes.com/2016/11/09/us/politics/hillary-clinton-donald-trump-president.html
+        | http://www.telegraph.co.uk/news/0/donald-trump-set-for-us-election-victory-in-americas-brexit/
+        | https://www.theguardian.com/us-news/2016/sep/25/mike-pence-donald-trump-political-donations-koch-brothers
+        | http://www.jpost.com/US-Elections/NY-Attorney-General-receives-antisemitic-backlash-for-investigating-Trump-Foundation-467946
+        | http://fortune.com/2016/09/14/donald-trump-foundation/ | http://fortune.com/2016/09/14/trump-foundation-investigation-pam-bondi/
+        | http://www.attn.com/stories/11365/donald-j-trump-foundation-under-investigation
+        | http://www.ag.ny.gov/press-releases | http://www.ag.ny.gov/press-release/statement-ny-ag-communications-director-eric-soufer
+        | http://triblive.com/usworld/nation/10431167-74/trump-lawsuit-university?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed:%20alltribstories%20(TribLIVE%20News)
+        | http://www.latimes.com/local/lanow/la-me-ln-donald-trump-university-fraud-20160506-story.html
+        | http://www.cbs8.com/story/31912769/trump-university-trial-date-set-after-election
+        | http://www.bostonglobe.com/news/politics/2016/05/05/paul-ryan-says-not-ready-support-donald-trump/8RNaZsvJ5PEbkc13fStsoI/story.html
+        | http://elpais.com/especiales/2015/donald-trump/ | http://www.koreaherald.com/view.php?ud=20151201000915
+        | http://2016.republican-candidates.org/Trump/ | http://www.cbsnews.com/news/trump-entertainment-resorts-files-for-bankruptcy/
+        | http://www.thefamouspeople.com/profiles/donald-trump-3378.php | http://www.trump.com/biography/
+        | http://time.com/3990496/donald-trump-children/ | http://www.businessinsider.in/THE-TRUMP-5-Meet-the-fabulous-offspring-of-GOP-presidential-candidate-Donald-Trump/articleshow/47962879.cms
+        | http://www.dailymail.co.uk/news/article-3127108/Donald-Trump-s-five-children-steal-spotlight-2016-announcement-nine-year-old-Barron-looking-especially-smart.html
+        | http://www.nytimes.com/2011/05/13/nyregion/feeling-deceived-over-homes-that-were-trump-in-name-only.html
+        | https://theblacksphere.net/2015/08/45-noteworthy-facts-donald-trump/ | http://www.forbes.com/profile/donald-trump/
+        | http://www.trump.com/Donald_J_Trump/Biography.asp | http://www.thewrap.com/tv/column-post/donald-trump-sued-over-failed-mexican-resort-26578/
+        | http://www.reuters.com/article/2010/08/03/us-trumpsoho-lawsuit-idUSTRE67232X20100803?type=domesticNews
+        | http://www.reuters.com/article/2010/08/03/us-trumpsoho-lawsuit-idUSTRE67232X20100803
+        | http://www.nndb.com/people/363/000022297/ | http://www.corporatecrimereporter.com/news/200/schneidermantrump832501/
+        | http://www.ag.ny.gov/press-release/ag-schneiderman-sues-donald-trump-trump-university-michael-sexton-defrauding-consumers</Comments>\n
+        \                       <ID>0</ID>\n                        <Type>Other</Type>\n
+        \                       <Value>Sources of Record Information</Value>\n                      </EntityAdditionalInfo>\n
+        \                     <EntityAdditionalInfo>\n                        <ID>0</ID>\n
+        \                       <Type>PlaceOfBirth</Type>\n                        <Value>New
+        York City, New York, United States</Value>\n                      </EntityAdditionalInfo>\n
+        \                   </AdditionalInfo>\n                    <Addresses>\n                      <EntityAddress>\n
+        \                       <Country>United States</Country>\n                        <ID>0</ID>\n
+        \                       <Type>Unknown</Type>\n                      </EntityAddress>\n
+        \                     <EntityAddress>\n                        <City>Washington</City>\n
+        \                       <Country>United States</Country>\n                        <ID>0</ID>\n
+        \                       <PostalCode>20500-0003</PostalCode>\n                        <StateProvinceDistrict>District
+        of Columbia</StateProvinceDistrict>\n                        <Street1>1600
+        Pennsylvania Ave NW</Street1>\n                        <Type>Unknown</Type>\n
+        \                     </EntityAddress>\n                    </Addresses>\n
+        \                   <AKAs>\n                      <EntityAKA>\n                        <Category>None</Category>\n
+        \                       <Comments>ID: 102451045</Comments>\n                        <ID>0</ID>\n
+        \                       <Name>\n                          <First>David</First>\n
+        \                         <Full>David Denison</Full>\n                          <Last>Denison</Last>\n
+        \                       </Name>\n                        <Type>AKA</Type>\n
+        \                     </EntityAKA>\n                      <EntityAKA>\n                        <Category>None</Category>\n
+        \                       <Comments>ID: 102451045</Comments>\n                        <ID>0</ID>\n
+        \                       <Name>\n                          <Full>&#x62F;&#x64A;&#x641;&#x62F;
+        &#x62F;&#x646;&#x64A;&#x633;&#x648;&#x646;</Full>\n                        </Name>\n
+        \                       <Type>AKA</Type>\n                      </EntityAKA>\n
+        \                   </AKAs>\n                    <Comments>Source: United
+        States,US-New York State Attorney General || Level: National | Category: PEP
+        | Subcategory: Govt Branch Member || Associations: | Wife (PEP:Family Member):
+        Trump, Melania, 2537468 | Son (PEP:Family Member): Trump, Barron William,
+        2537480 | Son (PEP:Family Member): Trump, Donald John, 2537467 | Son (PEP:Family
+        Member): Trump, Eric Fredrick, 2537479 | Daughter (PEP:Govt Branch Member):
+        Trump, Ivanka Marie, 2537485 | Daughter (PEP:Family Member): Trump, Tiffany
+        Ariana, 2537486 | Father (PEP:Family Member): Trump, Frederick Christ, 7645924
+        | Mother (PEP:Family Member): Trump, Mary Anne, 7775251 | Brother (PEP:Family
+        Member): Trump, Robert S, 2537517 | Sister (PEP:Courts): Trump Barry, Maryanne,
+        73874 | Sister (PEP:Family Member): Trump Grau, Elizabeth Joan, 2537536 |
+        Father-in-law (PEP:Family Member): Knavs, Viktor, 8462421 | Mother-in-law
+        (PEP:Family Member): Knavs, Amalija, 8462464 | Brother-in-law (PEP:Family
+        Member): Cigelnjak, Denis, 8466189 | Brother-in-law (PEP:Former PEP): Grau,
+        James Walter, 2537532 | Sister-in-law (PEP:Family Member): Knauss, Ines, 8466122
+        | Grandchild (PEP:Family Member): Kushner, Arabella Rose, 7647309 | Son-in-law
+        (PEP:Govt Branch Member): Kushner, Jared Corey, 7457246 | Grandchild (PEP:Family
+        Member): Kushner, Joseph Frederick, 7647332 | Grandchild (PEP:Family Member):
+        Kushner, Theodore James, 7647356 | Son-in-law (PEP:Family Member): Levesque,
+        Paul, 7806836 | Grandchild (PEP:Family Member): Trump, Chloe Sophia, 7647088
+        | Grandchild (PEP:Family Member): Trump, Donald John, 7646989 | Grandchild
+        (PEP:Family Member): Trump, Eric Luke, 8446639 | Grandchild (PEP:Family Member):
+        Trump, Kai Madison, 7646953 | Grandchild (PEP:Family Member): Trump, Spencer
+        Frederick, 7647052 | Grandchild (PEP:Family Member): Trump, Tristan Milos,
+        7647025 | Daughter-in-law (PEP:Family Member): Haydon Trump, Vanessa, 7646920
+        | Daughter-in-law (PEP:Family Member): Trump, Lara, 7645286 | Nephew (PEP:Family
+        Member): Desmond, David William, 2536812 | Ex-Wife (PEP:Family Member): Maples,
+        Marla, 7646013 | Ex-Wife (PEP:Family Member): Trump, Ivana, 7619196 | Friend
+        (PEP:Associate): Barrack, Thomas Joseph, 8416481 | Friend (PEP:Associate):
+        Briatore, Flavio, 4552819 | Friend (PEP:Associate): Broidy, Elliott B, 9355379
+        | Friend (PEP:Associate): Burns, Brian, 9396013 | Friend (PEP:Associate):
+        Epstein, Jeffrey Edward, 5708628 | Friend (PEP:Govt Branch Member): Feinberg,
+        Stephen Andrew, 8466282 | Friend (PEP:Diplomat): Friedman, David Melech, 7703039
+        | Friend (PEP:Mgmt Govt Corp): Gilbert, Martin James, 9396797 | Friend (PEP:Family
+        Member): Giuliani, Andrew Harold, 344484 | Friend (PEP:Govt Branch Member):
+        Giuliani, Rudolph William Louis, 33620 | Friend (PEP:Associate): LeFrak, Richard
+        Stone, 8411518 | Friend (PEP:Associate): Lewandowski, Corey Ryan, 8460592
+        | Friend (PEP:Associate): Lorber, Howard Mark, 8416569 | Friend (PEP:Senior
+        Party Member): Macri Blanco Villegas, Mauricio, 734911 | Friend (PEP:Diplomat):
+        Marks, Lana J., 10274727 | Friend (PEP:Associate): Pecker, David, 9332261
+        | Friend (PEP:Associate): Perez, Jorge, 10193572 | Friend (PEP:Associate):
+        Ross, Stephen M, 10193179 | Friend (PEP:Associate): Roth, Steven, 8411397
+        | Friend (PEP:Associate): Ruddy, Christopher, 8419755 | Friend (PEP:Associate):
+        Stone, Roger Jason, 8460397 | Friend (PEP:Family Member): Tanoesoedibjo, Bambang
+        Hary Iswanto, 3609888 | Associate (PEP:Associate): Arif, Tevfik, 10479714
+        | Associate (PEP:Former PEP): Bannon, Stephen Kevin, 7654070 | Associate (PEP:Associate):
+        Biundo, Michael, 7655976 | Associate (PEP:Former PEP): Bossert, Thomas P,
+        7786046 | Associate (PEP:Diplomat): Bremberg, Andrew P, 10368655 | Associate
+        (PEP:Associate): Clovis, Sam, 7655920 | Associate (PEP:Family Member): de
+        Oliveira Figueiredo, Paulo Renato, 7462805 | Associate (PEP:Govt Branch Member):
+        DeVos, Betsy, 7685654 | Associate (PEP:Associate): Dezer, Gil, 8337933 | Associate
+        (PEP:Associate): Dezer, Michael, 8337952 | Associate (PEP:Govt Branch Member):
+        Fears, Douglas, 9095010 | Associate (PEP:Associate): Gates, Richard W, 8523898
+        | Associate (PEP:Govt Branch Member): Greenblatt, Jason Dov, 8404607 | Associate
+        (PEP:Govt Branch Member): Habib Powell, Dina, 8046397 | Associate (PEP:Former
+        PEP): Icahn, Carl Celian, 5389261 | Associate (PEP:Govt Branch Member): Kellogg,
+        Joseph Keith, 7656115 | Associate (PEP:Former PEP): Kelly, John Francis, 245660
+        | Associate (PEP:Associate): Manafort, Paul John, 7506860 | Associate (PEP:Former
+        PEP): Manigault Newman, Omarosa, 7818443 | Associate (PEP:Former PEP): Mattis,
+        James Norman, 2025063 | Associate (PEP:Associate): McEntee, John D, 8825554
+        | Associate (PEP:Govt Branch Member): Miller, Stephen, 7802894 | Associate
+        (PEP:Govt Branch Member): Mnuchin, Steven Terner, 7677109 | Associate (PEP:Govt
+        Branch Member): Navarro, Peter, 7802269 | Associate (PEP:Associate): Page,
+        Carter, 8185025 | Associate (PEP:Associate): Papadopoulos, George, 7656073
+        | Associate (PEP:Govt Branch Member): Pence, Michael Richard, 29830 | Associate
+        (PEP:Associate): Phares, Walid, 7656209 | Associate (PEP:Former PEP): Priebus,
+        Reinhold Richard, 2058206 | Associate (PEP:Former PEP): Pruitt, Edward Scott,
+        184982 | Associate (PEP:Govt Branch Member): Ross, Wilbur Louis, 5637279 |
+        Associate (PEP:Mgmt Govt Corp): Sajwani, Hussain Ali Habib, 8325395 | Associate
+        (PEP:Associate): Sater, Felix Henry, 3231196 | Associate (PEP:Associate):
+        Scavino, Daniel, 7698876 | Associate (PEP:Associate): Schmitz, Joseph, 7656163
+        | Associate (PEP:Former PEP): Schmitz, Joseph Edward, 294901 | Associate (Enforcement:Fraud):
+        Sexton, Michael, 3875121 | Associate (PEP:Former PEP): Shulkin, David Jonathon,
+        7806731 | Associate (Enforcement:Conspiracy): Shusterman, Fima, 9330599 |
+        Associate (PEP:Former PEP): Spicer, Sean Michael, 7780833 | Associate (PEP:Govt
+        Branch Member): Verma, Seema, 7844071 | Associate (PEP:Former PEP): Zinke,
+        Ryan Keith, 2296097 | Advisor (PEP:Associate): Beal, Daniel Andrew, 8509617
+        | Advisor (PEP:Associate): Calk, Stephen M, 8509459 | Advisor (PEP:Associate):
+        DiMicco, Daniel R, 8509773 | Advisor (PEP:Govt Branch Member): Feinberg, Stephen
+        Andrew, 8466282 | Advisor (PEP:Associate): Moore, Stephen, 8510336 | Advisor
+        (PEP:Associate): Paulson, John Alfred, 8510464 | Legal Council (PEP:Attorney):
+        Cohen, Michael Dean, 8899959 | Legal Council (PEP:Former PEP): diGenova, Joseph
+        E, 8850319 | Legal Council (PEP:Attorney): Dowd, John M, 8624036 | Legal Council
+        (PEP:Associate): Kasowitz, Marc Elliot, 9350444 | Affiliated Company (Adverse
+        Media:Fraud): DJT Entrepreneur Managing Member LLC, 7496105 | Affiliated Company
+        (Adverse Media:Fraud): DJT Entrepreneur Member LLC, 7496102 | Affiliated Company
+        (Enforcement:Fraud): Donald J. Trump Foundation, 7549519 | Affiliated Company
+        (Enforcement:Fraud): The Trump Entrepreneur Initiative LLC, 3875122 | Affiliated
+        Company (Adverse Media:Fraud): The Trump Organization, Inc, 7496112 | Affiliated
+        Company (Adverse Media:Fraud): Trump Organization LLC, 7496116 || Last updated:
+        2020-01-20 || Profile Notes: According to bbc.com and foxnews.com; January
+        16, 2020: On January 15, 2020, The United States House of Representatives
+        passed a resolution to submit articles of impeachment against President Donald
+        Trump to the Senate for a trial. The Senate will decide whether to convict
+        and remove him from office.\n\nAccording to nytimes.com; December 18, 2019:
+        On December 18, 2019, the House of Representatives impeached Trump for abuse
+        of power and obstruction of Congress, making him the third president in history
+        to be charged with committing high crimes and misdemeanors and face removal
+        by the Senate.\n\nAccording to reuters.com; December 18, 2019: On December
+        18, 2019, the impeachment process of President Donald Trump is likely to begin
+        in the U.S. House of Representatives.\n\nAccording to apnews.com; December
+        11, 2019: House Democrats announced two articles of impeachment against President
+        Donald Trump, declaring he betrayed the nation with his actions toward Ukraine.
+        The specific charges aimed at removing the 45th president of the United States:
+        abuse of power and obstruction of Congress.\n\nAccording to thehill.com; November
+        17, 2019: The United States House of Representatives is investigating whether
+        Donald Trump tied Ukraine aid to the country opening an investigation into
+        former Vice President Joe Biden and his son Hunter Biden. The House held its
+        first public impeachment inquiry hearings against Trump in November, 2019.\n\nAccording
+        to the US-New York State Attorney General; November 07, 2019:  Donald J. Trump
+        was ordered to pay USD 2,000,000 in damages for improperly using charitable
+        assets to intervene in the 2016 presidential primaries and further his own
+        political interests. The award is part of Attorney General James&#x2019; lawsuit
+        against the Donald J. Trump Foundation and its directors, Trump, Donald Trump
+        Jr., Ivanka Trump, and Eric Trump. \n\nAs part of the settlement Trump Foundation
+        and its directors to resolve the remaining claims in the lawsuit. Trump admits
+        to personally misusing funds at the Trump Foundation, and agrees to restrictions
+        on future charitable service and ongoing reporting to the Office of the Attorney
+        General in the event he creates a new charity. The settlements also include
+        mandatory training requirements for Donald Trump Jr., Ivanka Trump, and Eric
+        Trump. Finally, the settlements name the charities that will receive the remaining
+        assets of the Trump Foundation as part of its dissolution.\n\nAccording to
+        nymag.com and abcnews.go.com; March 04, 2019: On March 01, 2019, Democrats
+        on the House Judiciary Committee launched a broad investigation into President
+        Donald Trump, issuing document requests for 81 people and entities tied to
+        him and potentially beginning to lay the groundwork for impeachment. The instigation
+        launched into allegations of obstruction of justice, corruption and abuse
+        of power.\n\nThe investigation will focus on, whether the president obstructed
+        justice by interfering with criminal investigations; potential corruption
+        such as violation of campaign and financial reporting laws, as well as possible
+        misuse of office for personal gain; and abuses of power to include misuse
+        of the pardon power and attacks on the press, judiciary and law enforcement
+        agencies.\n\nAccording to cnbc.com; December 13, 2018:  Donald Trump&#x2019;s
+        inaugural committee was put under investigation by Manhattan-based federal
+        prosecutors on suspected of whether some of the USD 107,000,000 in donations
+        to then President-elect Donald Trump&#x2019;s inaugural committee were misspent.\n\nAccording
+        to nytimes.com; October 2, 2018: Donald J. Trump was participated in dubious
+        tax schemes during the 1990s, including instances of outright fraud, that
+        greatly increased the fortune he received from his parents.\n\nTrump received
+        at least USD 413,000,000 from his father&#x2019;s real estate empire, starting
+        when he was a toddler and continuing to this day. Much of this money came
+        to Mr. Trump because he helped his parents dodge taxes. He and his siblings
+        set up a sham corporation to disguise millions of dollars in gifts from their
+        parents, records and interviews show. Records indicate that Mr. Trump helped
+        his father take improper tax deductions worth millions more. He also helped
+        formulate a strategy to undervalue his parents real estate holdings by hundreds
+        of millions of dollars on tax returns, sharply reducing the tax bill when
+        those properties were transferred to him and his siblings.\n\nAccording to
+        the US-New York State Attorney General; June 14, 2018: On June 14, 2018, the
+        lawsuit filed against Donald J. Trump Foundation, and its directors, Donald
+        J. Trump, Donald J. Trump, Jr., Ivanka Trump, and Eric Trump for extensive
+        and persistent violations of State and Federal law. The complaint alleges
+        a pattern of persistent illegal conduct, occurring over more than a decade
+        that includes extensive unlawful political coordination with the Trump presidential
+        campaign, repeated and willful self-dealing transactions to benefit Donald
+        J. Trump &#x2018;s personal and business interests, and violations of basic
+        legal obligations for non-profit foundations.\n\nAccording to nbcnews.com;
+        February 06, 2018: On February 06, 2018 court approved a USD 25,000,000 settlement
+        with students who said they were duped by Donald Trump and his Trump University,
+        which promised to teach them the secrets of success in the real estate industry.
+        Students had alleged that Trump University, which was open from 2005 to 2010,
+        used false advertising and high-pressure sales techniques to lure them to
+        free investor workshops at which they were sold expensive seminars and told
+        they would be mentored by real estate gurus, leading to the loss of thousands
+        of dollars in tuition.\n\nAccording to the U.S. Maryland Attorney General;
+        June 12, 2017: A lawsuit has been filed against President Donald Trump, alleging
+        that the President&#x2019;s wide-ranging business entanglements violate the
+        Constitution&#x2019;s Foreign and Domestic Emoluments Clauses. The lawsuit
+        alleges violations by the President of two distinct yet related provisions
+        of the U.S. Constitution that seek to make certain that he faithfully serves
+        the American people, free from compromising financial entanglements with foreign
+        and domestic governments and officials.\n\nAccording to washingtonpost.com;
+        November 18, 2016: President-elect Donald Trump, who has repeatedly bragged
+        that he never settles lawsuits despite a long history of doing so, has agreed
+        to a USD 25,000,000 settlement to end the fraud cases pending against his
+        defunct real estate seminar program, Trump University. The settlement eliminates
+        the possibility that Trump will be called to testify in court in the midst
+        of his presidential transition. It ends three separate lawsuits that made
+        claims against Trump University, including a California class action case
+        that was scheduled to go to trial.\n\nAccording to the US-New York State Attorney
+        General; August 25, 2013: A lawsuit has been filed against Donald Trump, The
+        Trump Entrepreneur Institute formerly named Trump University LLC (Trump University),
+        and Michael Sexton, former President of Trump University for engaging in persistent
+        fraudulent, illegal and deceptive conduct in connection with the operation
+        of Trump University\n\nBetween 2005 through 2011, Trump University operated
+        as an unlicensed educational institute that promised to teach Donald Trump&#x2019;s
+        real estate investing techniques to consumers nationwide but instead misled
+        consumers into paying for a series of expensive courses that did not deliver
+        on their promises. The petition filed in New York Supreme Court in Manhattan
+        by Attorney General details the advertisements run by Trump University in
+        major newspapers across the country and the direct mail solicitations sent
+        to entice consumers to attend a free workshop. An investigation revealed that
+        Donald Trump did not handpick even a single instructor at these seminars and
+        had little or no role in developing any of the Trump University curricula,
+        or seminar content.\n\nThe investigation also revealed that officials used
+        the name Trump University even though they lacked the charter necessary under
+        New York law to call themselves a University. They were also unlicensed under
+        New York State Education Law, evading an array of legal protections designed
+        to protect New Yorkers from fraud. Despite Trump University&#x2019;s advertised
+        claims, consumers attending free seminars did not learn Donald Trump&#x2019;s
+        real estate techniques. Instead, Trump University&#x2019;s instructors made
+        multiple misrepresentations to convince consumers to sign up for a USD 1,495
+        three-day seminar. In reality, many of the promises made at the free seminars
+        went unfulfilled. Despite claims to the contrary, consumers who paid for and
+        attended the three-day seminars were not taught everything they needed to
+        know about real estate investing.\n\nPolitical Party: Republican Party.\n\nCareer:\nPresident
+        of the United States (January 20, 2017 - January 20, 2021).</Comments>\n                    <DateListed>2010-08-05</DateListed>\n
+        \                   <EntityType>Individual</EntityType>\n                    <Gender>Male</Gender>\n
+        \                   <IDs>\n                      <EntityID>\n                        <ID>0</ID>\n
+        \                       <Number>1930191</Number>\n                        <Type>ProprietaryUID</Type>\n
+        \                     </EntityID>\n                    </IDs>\n                    <ListReferenceNumber>1930191</ListReferenceNumber>\n
+        \                   <Name>\n                      <First>Donald John</First>\n
+        \                     <Full>Donald John Trump Sr</Full>\n                      <Generation>Sr</Generation>\n
+        \                     <Last>Trump</Last>\n                    </Name>\n                    <ReasonListed>National:PEP:Govt
+        Branch Member</ReasonListed>\n                  </EntityDetails>\n                  <EntityName>Trump,
+        Donald John Sr</EntityName>\n                  <EntityScore>94</EntityScore>\n
+        \                 <EntityUniqueID>WX0001930191</EntityUniqueID>\n                  <FalsePositive>false</FalsePositive>\n
+        \                 <File>\n                    <Build>2020-02-06T12:15:28Z</Build>\n
+        \                   <Custom>false</Custom>\n                    <ID>411085</ID>\n
+        \                   <Name>WorldCompliance - Full.BDF</Name>\n                    <Published>2020-02-05T00:01:00Z</Published>\n
+        \                   <Type>BDF</Type>\n                  </File>\n                  <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>\n
+        \                 <ID>-1</ID>\n                  <MatchReAlert>false</MatchReAlert>\n
+        \                 <MatchXML>\n                    <Gender>\n                      <Input>Male</Input>\n
+        \                     <List>Male</List>\n                      <Score>100</Score>\n
+        \                   </Gender>\n                  </MatchXML>\n                  <PreviousResultID>-1</PreviousResultID>\n
+        \                 <ReasonListed>National:PEP:Govt Branch Member</ReasonListed>\n
+        \                 <ResultDate>2020-02-07T14:54:02.1114281Z</ResultDate>\n
+        \                 <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>\n
+        \                 <TrueMatch>false</TrueMatch>\n                </WLMatch>\n
+        \             </Matches>\n              <Status>Results</Status>\n            </Watchlist>\n
+        \         </ResultRecord>\n        </Records>\n        <SearchEngineVersion>5.28.1252.0</SearchEngineVersion>\n
+        \     </SearchResult>\n    </SearchResponse>\n  </s:Body>\n</s:Envelope>\n"
+    http_version: null
+  recorded_at: Fri, 07 Feb 2020 14:54:02 GMT
+recorded_with: VCR 5.1.0

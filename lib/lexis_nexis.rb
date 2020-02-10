@@ -3,66 +3,58 @@
 require 'savon'
 require 'lexis_nexis/response'
 
+# LexisNexis class connects to client with WSDL, sends requests, and handles responses
+# Default endpoint is Search
 module LexisNexis
   DEFAULT_CLIENT_HASH = {
     env_namespace: :soap,
-    element_form_default: :unqualified,
-    pretty_print_xml: true
+    element_form_default: :qualified,
+    pretty_print_xml: true,
+    namespace_identifier: :brid,
+    convert_request_keys_to: :none
   }
-  SOAP_ATTRIBUTES = { "xmlns" => "https://wsonline.seisint.com/WsIdentity" }
   RESPONSE_DELIMITER = "_response"
   RESULT_DELIMITER = "_result"
   RESPONSE_INDEX = "XML"
   DEFAULT_ERROR_MESSAGE = "Error in Response"
   KEYERROR_MESSAGE = "Malformed response object"
-  PARSE_HEADERS = {
-    :business_instant_id => :business_instant_id_response_ex
-  }
-  def self.client(wsdl, log = false)
+
+  def self.client(wsdl, endpoint: 'Search', log: false)
     config = DEFAULT_CLIENT_HASH
     config[:wsdl] = wsdl
     config[:log] = log
+    config[:endpoint] = wsdl.sub('?wsdl', "/#{endpoint}").to_s
     Savon::Client.new(config)
   end
 
-  def self.user(refernece_code, billing_code, query_id)
+  def self.credentials_hash
     {
-      "ReferenceCode" => reference_code,
-      "BillingCode" => billing_code,
-      "QueryId" => query_id
+      ClientID: LEXIS_NEXIS_CLIENT_ID,
+      Password: LEXIS_NEXIS_PASSWORD,
+      UserID: LEXIS_NEXIS_USERNAME
     }
   end
 
   def self.send_request(client_obj, operation, hash)
-    results = client_obj.call(operation, message: hash, :attributes => SOAP_ATTRIBUTES)
-    response_body_index = PARSE_HEADERS[operation]
-    if !response_body_index.nil? && !results.body.nil? && !results.body[response_body_index].nil?
-      response_body = results.body[response_body_index][:response][:result]
-    else
-      response_body = results.body
-    end
-    LexisNexis::Response.success(response_body)
-  rescue Savon::SOAPFault => error
-    error_hash = error.to_hash
-    report_error(operation, error_hash[:fault][:faultcode], error_hash[:fault][:detail][:exceptions][:exception])
-  rescue Savon::HTTPError => error
-    error_hash = error.to_hash
+    results = client_obj.call(operation, message: hash)
+    LexisNexis::Response.success(results.body)
+  rescue Savon::SOAPFault => e
+    error_hash = e.to_hash
+    report_error(error_hash[:fault][:faultcode], error_hash[:fault][:detail][:service_fault])
+  rescue Savon::HTTPError => e
+    error_hash = e.to_hash
     LexisNexis::Response.error(error_hash.code, error_hash.body)
   end
 
-  def self.report_error(operation, fault_code, errors)
-    #we may receive one or more exceptions. log all of them just incase
+  def self.report_error(fault_code, errors)
+    # We may receive one or more exceptions. log all of them just incase
     errors = errors.is_a?(Array) ? errors : [errors]
     codes = []
-    errors.each do |error|
-      error_string = "LexisNexis::#{operation.to_s.upcase} failed with error `#{error[:message]}`"
-      code = error_code(error[:message])
-      codes.push(code)
-    end
+    errors.each { |error| codes.push(error_code(error[:message])) }
     LexisNexis::Response.error(codes.first || fault_code, errors)
   end
 
   def self.error_code(message)
-    /\[(\d*)\]/.match(message)&.captures&.first
+    /\[([a-zA-Z\d:_]+)\]/.match(message)&.captures&.first
   end
 end

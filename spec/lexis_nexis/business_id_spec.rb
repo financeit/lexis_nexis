@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'lexis_nexis/business_id'
 
 RSpec.describe LexisNexis::BusinessID do
@@ -27,7 +28,15 @@ RSpec.describe LexisNexis::BusinessID do
       it { expect(user['DLPurpose']).to eq(hash_options[:dl_purpose]) }
     end
     context 'with an end user' do
-      let(:user) { LexisNexis::BusinessID.user_hash(hash_options[:reference_code], hash_options[:billing_code], hash_options[:glb_purpose], hash_options[:dl_purpose], hash_options[:end_user]) }
+      let(:user) do
+        LexisNexis::BusinessID.user_hash(
+          hash_options[:reference_code],
+          hash_options[:billing_code],
+          hash_options[:glb_purpose],
+          hash_options[:dl_purpose],
+          hash_options[:end_user]
+        )
+      end
       it { expect(user['ReferenceCode']).to eq(hash_options[:reference_code]) }
       it { expect(user['BillingCode']).to eq(hash_options[:billing_code]) }
       it { expect(user['GLBPurpose']).to eq(hash_options[:glb_purpose]) }
@@ -59,7 +68,12 @@ RSpec.describe LexisNexis::BusinessID do
       it { expect(wrap_request.keys).to eq(['User', :one]) }
     end
     context 'with two hashes' do
-      let(:wrap_request) { LexisNexis::BusinessID.wrap_request(hash_options[:sample_one_hash], hash_options[:sample_two_hash]) }
+      let(:wrap_request) do
+        LexisNexis::BusinessID.wrap_request(
+          hash_options[:sample_one_hash],
+          hash_options[:sample_two_hash]
+        )
+      end
       it { expect(wrap_request['User']).to eq(hash_options[:user]) }
       it { expect(wrap_request.keys).to eq(['User', :one, :two]) }
     end
@@ -73,11 +87,18 @@ RSpec.describe LexisNexis::BusinessID do
       }
     end
     it { expect(search_hash.keys).to eq(['SearchBy']) }
-    it { expect(search_hash['SearchBy']).to eq({ 'CompanyName' => hash_options[:company_name] }) }
+    it { expect(search_hash['SearchBy']).to eq('CompanyName' => hash_options[:company_name]) }
   end
 
   describe 'enduser_hash' do
-    let(:enduser) { LexisNexis::BusinessID.enduser_hash(hash_options[:company_name], hash_options[:street_address], hash_options[:state], hash_options[:zip5]) }
+    let(:enduser) do
+      LexisNexis::BusinessID.enduser_hash(
+        hash_options[:company_name],
+        hash_options[:street_address],
+        hash_options[:state],
+        hash_options[:zip5]
+      )
+    end
     let(:hash_options) do
       {
         company_name: 'test company',
@@ -147,7 +168,7 @@ RSpec.describe LexisNexis::BusinessID do
       let(:name_hash) { LexisNexis::BusinessID.name_hash(hash_options[:first_name], hash_options[:last_name]) }
       it { expect(name_hash['First']).to eq(hash_options[:first_name]) }
       it { expect(name_hash['Last']).to eq(hash_options[:last_name]) }
-      it { expect(name_hash.keys).to eq(['First', 'Last']) }
+      it { expect(name_hash.keys).to eq(%w[First Last]) }
     end
 
     context 'with a suffix' do
@@ -155,16 +176,23 @@ RSpec.describe LexisNexis::BusinessID do
       it { expect(name_hash['First']).to eq(hash_options[:first_name]) }
       it { expect(name_hash['Last']).to eq(hash_options[:last_name]) }
       it { expect(name_hash['Suffix']).to eq(hash_options[:suffix]) }
-      it { expect(name_hash.keys).to eq(['First', 'Last', 'Suffix']) }
+      it { expect(name_hash.keys).to eq(%w[First Last Suffix]) }
     end
 
     context 'with a suffix and middle name' do
-      let(:name_hash) { LexisNexis::BusinessID.name_hash(hash_options[:first_name], hash_options[:last_name], hash_options[:suffix], hash_options[:middle_name]) }
+      let(:name_hash) do
+        LexisNexis::BusinessID.name_hash(
+          hash_options[:first_name],
+          hash_options[:last_name],
+          hash_options[:suffix],
+          hash_options[:middle_name]
+        )
+      end
       it { expect(name_hash['First']).to eq(hash_options[:first_name]) }
       it { expect(name_hash['Last']).to eq(hash_options[:last_name]) }
       it { expect(name_hash['Middle']).to eq(hash_options[:middle_name]) }
       it { expect(name_hash['Suffix']).to eq(hash_options[:suffix]) }
-      it { expect(name_hash.keys).to eq(['First', 'Last', 'Suffix', 'Middle']) }
+      it { expect(name_hash.keys).to eq(%w[First Last Suffix Middle]) }
     end
   end
 
@@ -173,13 +201,13 @@ RSpec.describe LexisNexis::BusinessID do
       let(:options_hash) { LexisNexis::BusinessID.options_hash }
       let(:hash_options) do
         {
-          watchlists: %w(BES CFTC DTC EUDT FBI FCEN FAR IMW OFAC OCC OSFI PEP SDT BIS UNNT WBIF),
+          watchlists: %w[BES CFTC DTC EUDT FBI FCEN FAR IMW OFAC OCC OSFI PEP SDT BIS UNNT WBIF],
           ms_override: 0,
           dl_verification: 0,
           po_box: 0,
           global_watchlist: 0.84,
           business_defender: 0,
-          all_risk_indicators: 0,
+          all_risk_indicators: 0
         }
       end
       it { expect(options_hash['Watchlists'].values.first).to eq(hash_options[:watchlists]) }
@@ -196,13 +224,13 @@ RSpec.describe LexisNexis::BusinessID do
       let(:options_hash) { LexisNexis::BusinessID.options_hash(hash_options) }
       let(:hash_options) do
         {
-          watchlists: %w(BES),
+          watchlists: %w[BES],
           include_ms_override: 1,
           include_dl_verification: 0,
           po_box_compliance: 0,
           global_watchlist_threshold: 0.84,
           business_defender: 0,
-          include_all_risk_indicators: 0,
+          include_all_risk_indicators: 0
         }
       end
       it { expect(options_hash['Watchlists'].values.first).to eq(hash_options[:watchlists]) }

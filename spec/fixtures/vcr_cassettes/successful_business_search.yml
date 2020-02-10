@@ -1,0 +1,1813 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?wsdl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/xml; charset=UTF-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xg5-Version:
+      - 5.28.1252.0
+      Date:
+      - Fri, 07 Feb 2020 14:53:58 GMT
+      Content-Length:
+      - '52473'
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="utf-8"?>
+        <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="XGServices" targetNamespace="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0">
+          <wsp:Policy wsu:Id="BasicHttpBinding_IAccount_policy">
+            <wsp:ExactlyOne>
+              <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                  <wsp:Policy>
+                    <sp:TransportToken>
+                      <wsp:Policy>
+                        <sp:HttpsToken RequireClientCertificate="false"/>
+                      </wsp:Policy>
+                    </sp:TransportToken>
+                    <sp:AlgorithmSuite>
+                      <wsp:Policy>
+                        <sp:Basic256/>
+                      </wsp:Policy>
+                    </sp:AlgorithmSuite>
+                    <sp:Layout>
+                      <wsp:Policy>
+                        <sp:Strict/>
+                      </wsp:Policy>
+                    </sp:Layout>
+                  </wsp:Policy>
+                </sp:TransportBinding>
+              </wsp:All>
+            </wsp:ExactlyOne>
+          </wsp:Policy>
+          <wsp:Policy wsu:Id="BasicHttpBinding_IListMaintenance_policy">
+            <wsp:ExactlyOne>
+              <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                  <wsp:Policy>
+                    <sp:TransportToken>
+                      <wsp:Policy>
+                        <sp:HttpsToken RequireClientCertificate="false"/>
+                      </wsp:Policy>
+                    </sp:TransportToken>
+                    <sp:AlgorithmSuite>
+                      <wsp:Policy>
+                        <sp:Basic256/>
+                      </wsp:Policy>
+                    </sp:AlgorithmSuite>
+                    <sp:Layout>
+                      <wsp:Policy>
+                        <sp:Strict/>
+                      </wsp:Policy>
+                    </sp:Layout>
+                  </wsp:Policy>
+                </sp:TransportBinding>
+              </wsp:All>
+            </wsp:ExactlyOne>
+          </wsp:Policy>
+          <wsp:Policy wsu:Id="BasicHttpBinding_IResults_policy">
+            <wsp:ExactlyOne>
+              <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                  <wsp:Policy>
+                    <sp:TransportToken>
+                      <wsp:Policy>
+                        <sp:HttpsToken RequireClientCertificate="false"/>
+                      </wsp:Policy>
+                    </sp:TransportToken>
+                    <sp:AlgorithmSuite>
+                      <wsp:Policy>
+                        <sp:Basic256/>
+                      </wsp:Policy>
+                    </sp:AlgorithmSuite>
+                    <sp:Layout>
+                      <wsp:Policy>
+                        <sp:Strict/>
+                      </wsp:Policy>
+                    </sp:Layout>
+                  </wsp:Policy>
+                </sp:TransportBinding>
+              </wsp:All>
+            </wsp:ExactlyOne>
+          </wsp:Policy>
+          <wsp:Policy wsu:Id="BasicHttpBinding_ISearch_policy">
+            <wsp:ExactlyOne>
+              <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                  <wsp:Policy>
+                    <sp:TransportToken>
+                      <wsp:Policy>
+                        <sp:HttpsToken RequireClientCertificate="false"/>
+                      </wsp:Policy>
+                    </sp:TransportToken>
+                    <sp:AlgorithmSuite>
+                      <wsp:Policy>
+                        <sp:Basic256/>
+                      </wsp:Policy>
+                    </sp:AlgorithmSuite>
+                    <sp:Layout>
+                      <wsp:Policy>
+                        <sp:Strict/>
+                      </wsp:Policy>
+                    </sp:Layout>
+                  </wsp:Policy>
+                </sp:TransportBinding>
+              </wsp:All>
+            </wsp:ExactlyOne>
+          </wsp:Policy>
+          <wsdl:types>
+            <xsd:schema targetNamespace="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/Imports">
+              <xsd:import schemaLocation="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?xsd=xsd0" namespace="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0"/>
+              <xsd:import schemaLocation="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              <xsd:import schemaLocation="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?xsd=xsd2" namespace="http://microsoft.com/wsdl/types/"/>
+            </xsd:schema>
+          </wsdl:types>
+          <wsdl:message name="IAccount_ChangePassword_InputMessage">
+            <wsdl:part name="parameters" element="tns:ChangePassword"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_ChangePassword_OutputMessage">
+            <wsdl:part name="parameters" element="tns:ChangePasswordResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_ChangePassword_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_GetDaysUntilPasswordExpires_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetDaysUntilPasswordExpires"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_GetDaysUntilPasswordExpires_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetDaysUntilPasswordExpiresResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IAccount_GetDaysUntilPasswordExpires_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddList_InputMessage">
+            <wsdl:part name="parameters" element="tns:AddList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:AddListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteList_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetList_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_IndexList_InputMessage">
+            <wsdl:part name="parameters" element="tns:IndexList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_IndexList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:IndexListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_IndexList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_MergeDuplicates_InputMessage">
+            <wsdl:part name="parameters" element="tns:MergeDuplicates"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_MergeDuplicates_OutputMessage">
+            <wsdl:part name="parameters" element="tns:MergeDuplicatesResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_MergeDuplicates_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchLists_InputMessage">
+            <wsdl:part name="parameters" element="tns:SearchLists"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchLists_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchListsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchLists_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateList_InputMessage">
+            <wsdl:part name="parameters" element="tns:UpdateList"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:UpdateListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddResultRecord_InputMessage">
+            <wsdl:part name="parameters" element="tns:AddResultRecord"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddResultRecord_OutputMessage">
+            <wsdl:part name="parameters" element="tns:AddResultRecordResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddResultRecord_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:AddRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:AddRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_AddRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_DeleteRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_GetRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchListRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:SearchListRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchListRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchListRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_SearchListRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateRecord_InputMessage">
+            <wsdl:part name="parameters" element="tns:UpdateRecord"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateRecord_OutputMessage">
+            <wsdl:part name="parameters" element="tns:UpdateRecordResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IListMaintenance_UpdateRecord_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_AddAttachment_InputMessage">
+            <wsdl:part name="parameters" element="tns:AddAttachment"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_AddAttachment_OutputMessage">
+            <wsdl:part name="parameters" element="tns:AddAttachmentResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_AddAttachment_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteAttachment_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteAttachment"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteAttachment_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteAttachmentResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteAttachment_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetAttachment_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetAttachment"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetAttachment_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetAttachmentResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetAttachment_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteResultRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteResultRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteResultRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteResultRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteResultRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetResultRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetResultRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetResultRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetResultRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetResultRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchResultRecords_InputMessage">
+            <wsdl:part name="parameters" element="tns:SearchResultRecords"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchResultRecords_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchResultRecordsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchResultRecords_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SetRecordState_InputMessage">
+            <wsdl:part name="parameters" element="tns:SetRecordState"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SetRecordState_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SetRecordStateResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SetRecordState_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteRuns_InputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteRuns"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteRuns_OutputMessage">
+            <wsdl:part name="parameters" element="tns:DeleteRunsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_DeleteRuns_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetRunInfo_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetRunInfo"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetRunInfo_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetRunInfoResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_GetRunInfo_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchRuns_InputMessage">
+            <wsdl:part name="parameters" element="tns:SearchRuns"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchRuns_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchRunsResponse"/>
+          </wsdl:message>
+          <wsdl:message name="IResults_SearchRuns_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_GetDataFileList_InputMessage">
+            <wsdl:part name="parameters" element="tns:GetDataFileList"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_GetDataFileList_OutputMessage">
+            <wsdl:part name="parameters" element="tns:GetDataFileListResponse"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_GetDataFileList_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_Search_InputMessage">
+            <wsdl:part name="parameters" element="tns:Search"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_Search_OutputMessage">
+            <wsdl:part name="parameters" element="tns:SearchResponse"/>
+          </wsdl:message>
+          <wsdl:message name="ISearch_Search_ServiceFaultFault_FaultMessage">
+            <wsdl:part name="detail" element="tns:ServiceFault"/>
+          </wsdl:message>
+          <wsdl:portType name="IAccount">
+            <wsdl:operation name="ChangePassword">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/ChangePassword" message="tns:IAccount_ChangePassword_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/ChangePasswordResponse" message="tns:IAccount_ChangePassword_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/ChangePasswordServiceFaultFault" name="ServiceFaultFault" message="tns:IAccount_ChangePassword_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetDaysUntilPasswordExpires">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/GetDaysUntilPasswordExpires" message="tns:IAccount_GetDaysUntilPasswordExpires_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/GetDaysUntilPasswordExpiresResponse" message="tns:IAccount_GetDaysUntilPasswordExpires_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/GetDaysUntilPasswordExpiresServiceFaultFault" name="ServiceFaultFault" message="tns:IAccount_GetDaysUntilPasswordExpires_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+          </wsdl:portType>
+          <wsdl:portType name="IListMaintenance">
+            <wsdl:operation name="AddList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddList" message="tns:IListMaintenance_AddList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddListResponse" message="tns:IListMaintenance_AddList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_AddList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteList" message="tns:IListMaintenance_DeleteList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteListResponse" message="tns:IListMaintenance_DeleteList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_DeleteList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetList" message="tns:IListMaintenance_GetList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetListResponse" message="tns:IListMaintenance_GetList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_GetList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="IndexList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/IndexList" message="tns:IListMaintenance_IndexList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/IndexListResponse" message="tns:IListMaintenance_IndexList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/IndexListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_IndexList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="MergeDuplicates">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/MergeDuplicates" message="tns:IListMaintenance_MergeDuplicates_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/MergeDuplicatesResponse" message="tns:IListMaintenance_MergeDuplicates_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/MergeDuplicatesServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_MergeDuplicates_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SearchLists">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchLists" message="tns:IListMaintenance_SearchLists_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListsResponse" message="tns:IListMaintenance_SearchLists_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_SearchLists_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="UpdateList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateList" message="tns:IListMaintenance_UpdateList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateListResponse" message="tns:IListMaintenance_UpdateList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateListServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_UpdateList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="AddResultRecord">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddResultRecord" message="tns:IListMaintenance_AddResultRecord_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddResultRecordResponse" message="tns:IListMaintenance_AddResultRecord_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddResultRecordServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_AddResultRecord_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="AddRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddRecords" message="tns:IListMaintenance_AddRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddRecordsResponse" message="tns:IListMaintenance_AddRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_AddRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteRecords" message="tns:IListMaintenance_DeleteRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteRecordsResponse" message="tns:IListMaintenance_DeleteRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_DeleteRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetRecords" message="tns:IListMaintenance_GetRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetRecordsResponse" message="tns:IListMaintenance_GetRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_GetRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SearchListRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListRecords" message="tns:IListMaintenance_SearchListRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListRecordsResponse" message="tns:IListMaintenance_SearchListRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_SearchListRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="UpdateRecord">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateRecord" message="tns:IListMaintenance_UpdateRecord_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateRecordResponse" message="tns:IListMaintenance_UpdateRecord_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateRecordServiceFaultFault" name="ServiceFaultFault" message="tns:IListMaintenance_UpdateRecord_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+          </wsdl:portType>
+          <wsdl:portType name="IResults">
+            <wsdl:operation name="AddAttachment">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/AddAttachment" message="tns:IResults_AddAttachment_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/AddAttachmentResponse" message="tns:IResults_AddAttachment_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/AddAttachmentServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_AddAttachment_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteAttachment">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteAttachment" message="tns:IResults_DeleteAttachment_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteAttachmentResponse" message="tns:IResults_DeleteAttachment_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteAttachmentServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_DeleteAttachment_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetAttachment">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetAttachment" message="tns:IResults_GetAttachment_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetAttachmentResponse" message="tns:IResults_GetAttachment_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetAttachmentServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_GetAttachment_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteResultRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteResultRecords" message="tns:IResults_DeleteResultRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteResultRecordsResponse" message="tns:IResults_DeleteResultRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteResultRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_DeleteResultRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetResultRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetResultRecords" message="tns:IResults_GetResultRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetResultRecordsResponse" message="tns:IResults_GetResultRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetResultRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_GetResultRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SearchResultRecords">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchResultRecords" message="tns:IResults_SearchResultRecords_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchResultRecordsResponse" message="tns:IResults_SearchResultRecords_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchResultRecordsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_SearchResultRecords_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SetRecordState">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SetRecordState" message="tns:IResults_SetRecordState_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SetRecordStateResponse" message="tns:IResults_SetRecordState_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SetRecordStateServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_SetRecordState_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteRuns">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteRuns" message="tns:IResults_DeleteRuns_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteRunsResponse" message="tns:IResults_DeleteRuns_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteRunsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_DeleteRuns_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="GetRunInfo">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetRunInfo" message="tns:IResults_GetRunInfo_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetRunInfoResponse" message="tns:IResults_GetRunInfo_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetRunInfoServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_GetRunInfo_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="SearchRuns">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchRuns" message="tns:IResults_SearchRuns_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchRunsResponse" message="tns:IResults_SearchRuns_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchRunsServiceFaultFault" name="ServiceFaultFault" message="tns:IResults_SearchRuns_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+          </wsdl:portType>
+          <wsdl:portType name="ISearch">
+            <wsdl:operation name="GetDataFileList">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/GetDataFileList" message="tns:ISearch_GetDataFileList_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/GetDataFileListResponse" message="tns:ISearch_GetDataFileList_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/GetDataFileListServiceFaultFault" name="ServiceFaultFault" message="tns:ISearch_GetDataFileList_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+            <wsdl:operation name="Search">
+              <wsdl:input wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/Search" message="tns:ISearch_Search_InputMessage"/>
+              <wsdl:output wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/SearchResponse" message="tns:ISearch_Search_OutputMessage"/>
+              <wsdl:fault wsaw:Action="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/SearchServiceFaultFault" name="ServiceFaultFault" message="tns:ISearch_Search_ServiceFaultFault_FaultMessage"/>
+            </wsdl:operation>
+          </wsdl:portType>
+          <wsdl:binding name="BasicHttpBinding_IAccount" type="tns:IAccount">
+            <wsp:PolicyReference URI="#BasicHttpBinding_IAccount_policy"/>
+            <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="ChangePassword">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/ChangePassword" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetDaysUntilPasswordExpires">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IAccount/GetDaysUntilPasswordExpires" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+          </wsdl:binding>
+          <wsdl:binding name="BasicHttpBinding_IListMaintenance" type="tns:IListMaintenance">
+            <wsp:PolicyReference URI="#BasicHttpBinding_IListMaintenance_policy"/>
+            <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="AddList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="IndexList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/IndexList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="MergeDuplicates">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/MergeDuplicates" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SearchLists">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchLists" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="UpdateList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="AddResultRecord">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddResultRecord" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="AddRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/AddRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/DeleteRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/GetRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SearchListRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/SearchListRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="UpdateRecord">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IListMaintenance/UpdateRecord" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+          </wsdl:binding>
+          <wsdl:binding name="BasicHttpBinding_IResults" type="tns:IResults">
+            <wsp:PolicyReference URI="#BasicHttpBinding_IResults_policy"/>
+            <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="AddAttachment">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/AddAttachment" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteAttachment">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteAttachment" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetAttachment">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetAttachment" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteResultRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteResultRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetResultRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetResultRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SearchResultRecords">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchResultRecords" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SetRecordState">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SetRecordState" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="DeleteRuns">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/DeleteRuns" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="GetRunInfo">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/GetRunInfo" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="SearchRuns">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/IResults/SearchRuns" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+          </wsdl:binding>
+          <wsdl:binding name="BasicHttpBinding_ISearch" type="tns:ISearch">
+            <wsp:PolicyReference URI="#BasicHttpBinding_ISearch_policy"/>
+            <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+            <wsdl:operation name="GetDataFileList">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/GetDataFileList" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+            <wsdl:operation name="Search">
+              <soap:operation soapAction="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/Search" style="document"/>
+              <wsdl:input>
+                <soap:body use="literal"/>
+              </wsdl:input>
+              <wsdl:output>
+                <soap:body use="literal"/>
+              </wsdl:output>
+              <wsdl:fault name="ServiceFaultFault">
+                <soap:fault name="ServiceFaultFault" use="literal"/>
+              </wsdl:fault>
+            </wsdl:operation>
+          </wsdl:binding>
+          <wsdl:service name="XGServices">
+            <wsdl:port name="BasicHttpBinding_IAccount" binding="tns:BasicHttpBinding_IAccount">
+              <soap:address location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Account"/>
+            </wsdl:port>
+            <wsdl:port name="BasicHttpBinding_IListMaintenance" binding="tns:BasicHttpBinding_IListMaintenance">
+              <soap:address location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/ListMaintenance"/>
+            </wsdl:port>
+            <wsdl:port name="BasicHttpBinding_IResults" binding="tns:BasicHttpBinding_IResults">
+              <soap:address location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Results"/>
+            </wsdl:port>
+            <wsdl:port name="BasicHttpBinding_ISearch" binding="tns:BasicHttpBinding_ISearch">
+              <soap:address location="https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search"/>
+            </wsdl:port>
+          </wsdl:service>
+        </wsdl:definitions>
+    http_version: null
+  recorded_at: Fri, 07 Feb 2020 14:53:58 GMT
+- request:
+    method: post
+    uri: https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc/Search
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:brid="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0"
+        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><brid:Search><brid:context><brid:ClientID><CLIENT_ID></brid:ClientID><brid:Password><PASSWORD></brid:Password><brid:UserID><USERNAME></brid:UserID></brid:context><brid:config><brid:PredefinedSearchName>Borrower
+        Onboarding</brid:PredefinedSearchName></brid:config><brid:input><brid:Records><brid:InputRecord><brid:Entity><brid:EntityType>Business</brid:EntityType><brid:Name><brid:Full>Cannabis
+        Culture</brid:Full></brid:Name></brid:Entity></brid:InputRecord></brid:Records></brid:input></brid:Search></soap:Body></soap:Envelope>
+    headers:
+      Soapaction:
+      - '"https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0/ISearch/Search"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '844'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/xml; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding,Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Xg5-Version:
+      - 5.28.1252.0
+      Date:
+      - Fri, 07 Feb 2020 14:53:58 GMT
+      Content-Length:
+      - '44540'
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+          <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <SearchResponse xmlns="https://bridgerinsight.lexisnexis.com/BridgerInsight.Web.Services.Interfaces.11.0">
+              <SearchResult>
+                <Records>
+                  <ResultRecord>
+                    <Record>1</Record>
+                    <RecordDetails>
+                      <AcceptListID>-1</AcceptListID>
+                      <AccountAmount/>
+                      <AccountDate/>
+                      <AccountGroupID/>
+                      <AccountOtherData/>
+                      <AccountProviderID/>
+                      <AccountType/>
+                      <AddedToAcceptList>false</AddedToAcceptList>
+                      <DPPA>NA</DPPA>
+                      <EFTContext/>
+                      <EFTType>None</EFTType>
+                      <EntityType>Business</EntityType>
+                      <Gender>None</Gender>
+                      <GLB>255</GLB>
+                      <LastUpdatedDate>2020-02-07T14:53:59.5970511Z</LastUpdatedDate>
+                      <Name>
+                        <First/>
+                        <Full>Cannabis Culture</Full>
+                        <Generation/>
+                        <Last/>
+                        <Middle/>
+                        <Title/>
+                      </Name>
+                      <RecordState>
+                        <AddedToAcceptList>false</AddedToAcceptList>
+                        <AlertState>Unassigned</AlertState>
+                        <AssignmentType>Unknown</AssignmentType>
+                        <MatchStates>
+                          <WatchlistMatchState>
+                            <MatchID>0</MatchID>
+                            <Type>None</Type>
+                          </WatchlistMatchState>
+                          <WatchlistMatchState>
+                            <MatchID>0</MatchID>
+                            <Type>None</Type>
+                          </WatchlistMatchState>
+                          <WatchlistMatchState>
+                            <MatchID>0</MatchID>
+                            <Type>None</Type>
+                          </WatchlistMatchState>
+                          <WatchlistMatchState>
+                            <MatchID>0</MatchID>
+                            <Type>None</Type>
+                          </WatchlistMatchState>
+                          <WatchlistMatchState>
+                            <MatchID>0</MatchID>
+                            <Type>None</Type>
+                          </WatchlistMatchState>
+                          <WatchlistMatchState>
+                            <MatchID>0</MatchID>
+                            <Type>None</Type>
+                          </WatchlistMatchState>
+                          <WatchlistMatchState>
+                            <MatchID>0</MatchID>
+                            <Type>None</Type>
+                          </WatchlistMatchState>
+                        </MatchStates>
+                        <Status/>
+                      </RecordState>
+                      <SearchDate>2020-02-07T14:53:59.5970511Z</SearchDate>
+                      <Text/>
+                    </RecordDetails>
+                    <ResultID>-1</ResultID>
+                    <RunID>-1</RunID>
+                    <Watchlist>
+                      <Matches>
+                        <WLMatch>
+                          <AcceptListID>-1</AcceptListID>
+                          <AddedToAcceptList>false</AddedToAcceptList>
+                          <AddressName>false</AddressName>
+                          <AutoFalsePositive>false</AutoFalsePositive>
+                          <BestAddressIsPartial>false</BestAddressIsPartial>
+                          <BestCountry/>
+                          <BestCountryScore>-1</BestCountryScore>
+                          <BestCountryType>None</BestCountryType>
+                          <BestDOBIsPartial>false</BestDOBIsPartial>
+                          <BestName>Culture Cannabis Club</BestName>
+                          <BestNameScore>98</BestNameScore>
+                          <CheckSum>48861</CheckSum>
+                          <Conflicts>
+                            <AddressConflict>false</AddressConflict>
+                            <CitizenshipConflict>false</CitizenshipConflict>
+                            <CountryConflict>false</CountryConflict>
+                            <DOBConflict>false</DOBConflict>
+                            <EntityTypeConflict>false</EntityTypeConflict>
+                            <GenderConflict>false</GenderConflict>
+                            <IDConflict>false</IDConflict>
+                            <PhoneConflict>false</PhoneConflict>
+                          </Conflicts>
+                          <EntityDetails>
+                            <AdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>Cannabis Evaluation Center, Inc. | https://members.worldcompliance.com/metawatch2.aspx?id=9f6a681a-973f-4b04-aaa5-0d58f79d556c</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Link to WorldCompliance Online Database</Value>
+                              </EntityAdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>https://online.bcc.ca.gov/bcc/customization/bcc/cap/licenseSearch.aspx | https://cannabis.ca.gov/check_a_license/ | https://cannabis.ca.gov/</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Sources of Record Information</Value>
+                              </EntityAdditionalInfo>
+                            </AdditionalInfo>
+                            <Addresses>
+                              <EntityAddress>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                              <EntityAddress>
+                                <City>Long Beach</City>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <PostalCode>90808</PostalCode>
+                                <StateProvinceDistrict>California</StateProvinceDistrict>
+                                <Street1>3120 Los Coyotes Diagonal</Street1>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                            </Addresses>
+                            <AKAs>
+                              <EntityAKA>
+                                <Category>None</Category>
+                                <Comments>ID: 105895025</Comments>
+                                <ID>0</ID>
+                                <Name>
+                                  <Full>Culture Cannabis Club</Full>
+                                </Name>
+                                <Type>None</Type>
+                              </EntityAKA>
+                            </AKAs>
+                            <Comments>Source: United States,US Marijuana Registered Businesses || Offense: California State Registered Marijuana Dispensary. || Category: Registrations | Subcategory: Marijuana Reg Bus || Last updated: 2020-01-23 || Profile Notes: Owner Name: Christina Duong
+
+        Type of Facility:
+        Medical.</Comments>
+                            <DateListed>2020-01-23</DateListed>
+                            <EntityType>Business</EntityType>
+                            <IDs>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>C10-0000683-LIC</Number>
+                                <Type>Other</Type>
+                              </EntityID>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>10481252</Number>
+                                <Type>ProprietaryUID</Type>
+                              </EntityID>
+                            </IDs>
+                            <ListReferenceNumber>10481252</ListReferenceNumber>
+                            <Name>
+                              <Full>Cannabis Evaluation Center, Inc.</Full>
+                            </Name>
+                            <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          </EntityDetails>
+                          <EntityName>Cannabis Evaluation Center, Inc.</EntityName>
+                          <EntityScore>98</EntityScore>
+                          <EntityUniqueID>WX0010481252</EntityUniqueID>
+                          <FalsePositive>false</FalsePositive>
+                          <File>
+                            <Build>2020-02-06T09:49:02Z</Build>
+                            <Custom>false</Custom>
+                            <ID>411095</ID>
+                            <Name>WorldCompliance - Registrations.BDF</Name>
+                            <Published>2020-02-05T00:01:00Z</Published>
+                            <Type>BDF</Type>
+                          </File>
+                          <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
+                          <ID>-1</ID>
+                          <MatchReAlert>false</MatchReAlert>
+                          <PreviousResultID>-1</PreviousResultID>
+                          <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
+                          <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
+                          <TrueMatch>false</TrueMatch>
+                        </WLMatch>
+                        <WLMatch>
+                          <AcceptListID>-1</AcceptListID>
+                          <AddedToAcceptList>false</AddedToAcceptList>
+                          <AddressName>false</AddressName>
+                          <AutoFalsePositive>false</AutoFalsePositive>
+                          <BestAddressIsPartial>false</BestAddressIsPartial>
+                          <BestCountry/>
+                          <BestCountryScore>-1</BestCountryScore>
+                          <BestCountryType>None</BestCountryType>
+                          <BestDOBIsPartial>false</BestDOBIsPartial>
+                          <BestName>Cannabis</BestName>
+                          <BestNameScore>94</BestNameScore>
+                          <CheckSum>88995</CheckSum>
+                          <Conflicts>
+                            <AddressConflict>false</AddressConflict>
+                            <CitizenshipConflict>false</CitizenshipConflict>
+                            <CountryConflict>false</CountryConflict>
+                            <DOBConflict>false</DOBConflict>
+                            <EntityTypeConflict>false</EntityTypeConflict>
+                            <GenderConflict>false</GenderConflict>
+                            <IDConflict>false</IDConflict>
+                            <PhoneConflict>false</PhoneConflict>
+                          </Conflicts>
+                          <EntityDetails>
+                            <AdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>Cannabis Corp | https://members.worldcompliance.com/metawatch2.aspx?id=32215c8d-65ef-4a83-8abd-2433584bec92</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Link to WorldCompliance Online Database</Value>
+                              </EntityAdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>https://www.colorado.gov/pacific/sites/default/files/190603%20RGrows.xlsx | https://www.colorado.gov/pacific/sites/default/files/190603%20Stores.xlsx | https://www.colorado.gov/pacific/sites/default/files/Rgrows%2011012018%20%282%29.xlsx | https://www.colorado.gov/pacific/sites/default/files/Stores%2011012018%20%282%29.xlsx | https://www.colorado.gov/pacific/sites/default/files/Centers%2011012018%20%282%29.xlsx | https://www.colorado.gov/pacific/sites/default/files/Stores%2012012017_1.pdf | https://www.colorado.gov/pacific/sites/default/files/MGrows%2012012017_1.pdf | https://www.colorado.gov/pacific/sites/default/files/Centers%2012012017_2.pdf | https://www.colorado.gov/pacific/sites/default/files/RGrows%2012012017_1.pdf | https://www.colorado.gov/pacific/enforcement/med-licensed-facilities | http://www.thejoint.life/</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Sources of Record Information</Value>
+                              </EntityAdditionalInfo>
+                            </AdditionalInfo>
+                            <Addresses>
+                              <EntityAddress>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                              <EntityAddress>
+                                <City>Denver</City>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <PostalCode>80223</PostalCode>
+                                <StateProvinceDistrict>Colorado</StateProvinceDistrict>
+                                <Street1>1055 South Fox Street</Street1>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                              <EntityAddress>
+                                <City>Denver</City>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <PostalCode>80212</PostalCode>
+                                <StateProvinceDistrict>Colorado</StateProvinceDistrict>
+                                <Street1>4735 West 38th Avenue</Street1>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                            </Addresses>
+                            <AKAs>
+                              <EntityAKA>
+                                <Category>None</Category>
+                                <Comments>ID: 101031692</Comments>
+                                <ID>0</ID>
+                                <Name>
+                                  <Full>Cannabis</Full>
+                                </Name>
+                                <Type>None</Type>
+                              </EntityAKA>
+                              <EntityAKA>
+                                <Category>None</Category>
+                                <Comments>ID: 100974671</Comments>
+                                <ID>0</ID>
+                                <Name>
+                                  <Full>The Joint By Cannabis</Full>
+                                </Name>
+                                <Type>None</Type>
+                              </EntityAKA>
+                            </AKAs>
+                            <Comments>Source: United States,US Marijuana Registered Businesses || Offense: Colorado State Registered Marijuana Center. || Category: Registrations | Subcategory: Marijuana Reg Bus || Last updated: 2019-06-17 || Profile Notes: Type of Facility:
+        Medical and Recreational.</Comments>
+                            <DateListed>2015-11-25</DateListed>
+                            <EntityType>Business</EntityType>
+                            <IDs>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>402-00198</Number>
+                                <Type>Other</Type>
+                              </EntityID>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>7164460</Number>
+                                <Type>ProprietaryUID</Type>
+                              </EntityID>
+                            </IDs>
+                            <ListReferenceNumber>7164460</ListReferenceNumber>
+                            <Name>
+                              <Full>Cannabis Corp</Full>
+                            </Name>
+                            <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          </EntityDetails>
+                          <EntityName>Cannabis Corp</EntityName>
+                          <EntityScore>94</EntityScore>
+                          <EntityUniqueID>WX0007164460</EntityUniqueID>
+                          <FalsePositive>false</FalsePositive>
+                          <File>
+                            <Build>2020-02-06T09:49:02Z</Build>
+                            <Custom>false</Custom>
+                            <ID>411095</ID>
+                            <Name>WorldCompliance - Registrations.BDF</Name>
+                            <Published>2020-02-05T00:01:00Z</Published>
+                            <Type>BDF</Type>
+                          </File>
+                          <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
+                          <ID>-1</ID>
+                          <MatchReAlert>false</MatchReAlert>
+                          <PreviousResultID>-1</PreviousResultID>
+                          <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
+                          <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
+                          <TrueMatch>false</TrueMatch>
+                        </WLMatch>
+                        <WLMatch>
+                          <AcceptListID>-1</AcceptListID>
+                          <AddedToAcceptList>false</AddedToAcceptList>
+                          <AddressName>false</AddressName>
+                          <AutoFalsePositive>false</AutoFalsePositive>
+                          <BestAddressIsPartial>false</BestAddressIsPartial>
+                          <BestCountry/>
+                          <BestCountryScore>-1</BestCountryScore>
+                          <BestCountryType>None</BestCountryType>
+                          <BestDOBIsPartial>false</BestDOBIsPartial>
+                          <BestName>Cannabis, LLC</BestName>
+                          <BestNameScore>87</BestNameScore>
+                          <CheckSum>54478</CheckSum>
+                          <Conflicts>
+                            <AddressConflict>false</AddressConflict>
+                            <CitizenshipConflict>false</CitizenshipConflict>
+                            <CountryConflict>false</CountryConflict>
+                            <DOBConflict>false</DOBConflict>
+                            <EntityTypeConflict>false</EntityTypeConflict>
+                            <GenderConflict>false</GenderConflict>
+                            <IDConflict>false</IDConflict>
+                            <PhoneConflict>false</PhoneConflict>
+                          </Conflicts>
+                          <EntityDetails>
+                            <AdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>Cannabis, LLC | https://members.worldcompliance.com/metawatch2.aspx?id=b20d835c-b0a7-4df6-bd3e-bcd7b1ca756d</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Link to WorldCompliance Online Database</Value>
+                              </EntityAdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>https://www.oregon.gov/olcc/marijuana/Documents/MarijuanaLicenses_approved.pdf | https://www.oregon.gov/olcc/marijuana/pages/default.aspx | http://nbc16.com/news/local/we-as-dispensary-owners-know-this-is-a-scary-thing-for-new-cities-to-get-in-to | http://projects.oregonlive.com/maps/marijuana/dispensaries</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Sources of Record Information</Value>
+                              </EntityAdditionalInfo>
+                            </AdditionalInfo>
+                            <Addresses>
+                              <EntityAddress>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                              <EntityAddress>
+                                <City>Springfield</City>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <PostalCode>97477</PostalCode>
+                                <StateProvinceDistrict>Oregon</StateProvinceDistrict>
+                                <Street1>1936 Main Street</Street1>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                            </Addresses>
+                            <Comments>Source: United States,US Marijuana Registered Businesses || Offense: Oregon State Registered Marijuana Dispensary. || Category: Registrations | Subcategory: Marijuana Reg Bus || Last updated: 2019-05-13 || Profile Notes: Co-founder: Jason Thomas
+
+        Type of Facility:
+        Recreational.</Comments>
+                            <DateListed>2015-09-28</DateListed>
+                            <EntityType>Business</EntityType>
+                            <IDs>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>050 10010193FDD</Number>
+                                <Type>Other</Type>
+                              </EntityID>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>7099381</Number>
+                                <Type>ProprietaryUID</Type>
+                              </EntityID>
+                            </IDs>
+                            <ListReferenceNumber>7099381</ListReferenceNumber>
+                            <Name>
+                              <Full>Cannabis, LLC</Full>
+                            </Name>
+                            <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          </EntityDetails>
+                          <EntityName>Cannabis, LLC</EntityName>
+                          <EntityScore>87</EntityScore>
+                          <EntityUniqueID>WX0007099381</EntityUniqueID>
+                          <FalsePositive>false</FalsePositive>
+                          <File>
+                            <Build>2020-02-06T09:49:02Z</Build>
+                            <Custom>false</Custom>
+                            <ID>411095</ID>
+                            <Name>WorldCompliance - Registrations.BDF</Name>
+                            <Published>2020-02-05T00:01:00Z</Published>
+                            <Type>BDF</Type>
+                          </File>
+                          <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
+                          <ID>-1</ID>
+                          <MatchReAlert>false</MatchReAlert>
+                          <PreviousResultID>-1</PreviousResultID>
+                          <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
+                          <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
+                          <TrueMatch>false</TrueMatch>
+                        </WLMatch>
+                        <WLMatch>
+                          <AcceptListID>-1</AcceptListID>
+                          <AddedToAcceptList>false</AddedToAcceptList>
+                          <AddressName>false</AddressName>
+                          <AutoFalsePositive>false</AutoFalsePositive>
+                          <BestAddressIsPartial>false</BestAddressIsPartial>
+                          <BestCountry/>
+                          <BestCountryScore>-1</BestCountryScore>
+                          <BestCountryType>None</BestCountryType>
+                          <BestDOBIsPartial>false</BestDOBIsPartial>
+                          <BestName>Cannabis &amp; Co</BestName>
+                          <BestNameScore>87</BestNameScore>
+                          <CheckSum>61515</CheckSum>
+                          <Conflicts>
+                            <AddressConflict>false</AddressConflict>
+                            <CitizenshipConflict>false</CitizenshipConflict>
+                            <CountryConflict>false</CountryConflict>
+                            <DOBConflict>false</DOBConflict>
+                            <EntityTypeConflict>false</EntityTypeConflict>
+                            <GenderConflict>false</GenderConflict>
+                            <IDConflict>false</IDConflict>
+                            <PhoneConflict>false</PhoneConflict>
+                          </Conflicts>
+                          <EntityDetails>
+                            <AdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>CO2 Company Auction House LLC | https://members.worldcompliance.com/metawatch2.aspx?id=f8aa7871-c215-4e70-8c58-be81fae7773d</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Link to WorldCompliance Online Database</Value>
+                              </EntityAdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>https://web.archive.org/web/20180517145755/oregon.gov/olcc/marijuana/Documents/MarijuanaLicenses_approved.pdf | https://www.oregon.gov/olcc/marijuana/Documents/Approved_Retail_Licenses.pdf | https://www.oregon.gov/olcc/marijuana/Documents/MarijuanaLicenses_approved.pdf | https://www.oregon.gov/olcc/marijuana/pages/default.aspx</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Sources of Record Information</Value>
+                              </EntityAdditionalInfo>
+                            </AdditionalInfo>
+                            <Addresses>
+                              <EntityAddress>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                              <EntityAddress>
+                                <City>Portland</City>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <PostalCode>97239</PostalCode>
+                                <StateProvinceDistrict>Oregon</StateProvinceDistrict>
+                                <Street1>1010 SW Gibbs Street</Street1>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                            </Addresses>
+                            <AKAs>
+                              <EntityAKA>
+                                <Category>None</Category>
+                                <Comments>ID: 104914455</Comments>
+                                <ID>0</ID>
+                                <Name>
+                                  <Full>Cannabis &amp; Co</Full>
+                                </Name>
+                                <Type>None</Type>
+                              </EntityAKA>
+                              <EntityAKA>
+                                <Category>None</Category>
+                                <Comments>ID: 101494641</Comments>
+                                <ID>0</ID>
+                                <Name>
+                                  <Full>Headwater</Full>
+                                </Name>
+                                <Type>None</Type>
+                              </EntityAKA>
+                              <EntityAKA>
+                                <Category>None</Category>
+                                <Comments>ID: 105477217</Comments>
+                                <ID>0</ID>
+                                <Name>
+                                  <Full>High Habits</Full>
+                                </Name>
+                                <Type>None</Type>
+                              </EntityAKA>
+                              <EntityAKA>
+                                <Category>None</Category>
+                                <Comments>ID: 105477216</Comments>
+                                <ID>0</ID>
+                                <Name>
+                                  <Full>Pacific Gold</Full>
+                                </Name>
+                                <Type>None</Type>
+                              </EntityAKA>
+                            </AKAs>
+                            <Comments>Source: United States,US Marijuana Registered Businesses || Offense: Oregon State Registered Marijuana Center. || Category: Registrations | Subcategory: Marijuana Reg Bus || Last updated: 2020-01-22 || Profile Notes: Type of Facility:
+        Recreational.</Comments>
+                            <DateListed>2017-07-11</DateListed>
+                            <EntityType>Business</EntityType>
+                            <IDs>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>050 1004116B110</Number>
+                                <Type>Other</Type>
+                              </EntityID>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>8296843</Number>
+                                <Type>ProprietaryUID</Type>
+                              </EntityID>
+                            </IDs>
+                            <ListReferenceNumber>8296843</ListReferenceNumber>
+                            <Name>
+                              <Full>CO2 Company Auction House LLC</Full>
+                            </Name>
+                            <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          </EntityDetails>
+                          <EntityName>CO2 Company Auction House LLC</EntityName>
+                          <EntityScore>87</EntityScore>
+                          <EntityUniqueID>WX0008296843</EntityUniqueID>
+                          <FalsePositive>false</FalsePositive>
+                          <File>
+                            <Build>2020-02-06T09:49:02Z</Build>
+                            <Custom>false</Custom>
+                            <ID>411095</ID>
+                            <Name>WorldCompliance - Registrations.BDF</Name>
+                            <Published>2020-02-05T00:01:00Z</Published>
+                            <Type>BDF</Type>
+                          </File>
+                          <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
+                          <ID>-1</ID>
+                          <MatchReAlert>false</MatchReAlert>
+                          <PreviousResultID>-1</PreviousResultID>
+                          <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
+                          <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
+                          <TrueMatch>false</TrueMatch>
+                        </WLMatch>
+                        <WLMatch>
+                          <AcceptListID>-1</AcceptListID>
+                          <AddedToAcceptList>false</AddedToAcceptList>
+                          <AddressName>false</AddressName>
+                          <AutoFalsePositive>false</AutoFalsePositive>
+                          <BestAddressIsPartial>false</BestAddressIsPartial>
+                          <BestCountry/>
+                          <BestCountryScore>-1</BestCountryScore>
+                          <BestCountryType>None</BestCountryType>
+                          <BestDOBIsPartial>false</BestDOBIsPartial>
+                          <BestName>The Cannabis Company</BestName>
+                          <BestNameScore>87</BestNameScore>
+                          <CheckSum>44320</CheckSum>
+                          <Conflicts>
+                            <AddressConflict>false</AddressConflict>
+                            <CitizenshipConflict>false</CitizenshipConflict>
+                            <CountryConflict>false</CountryConflict>
+                            <DOBConflict>false</DOBConflict>
+                            <EntityTypeConflict>false</EntityTypeConflict>
+                            <GenderConflict>false</GenderConflict>
+                            <IDConflict>false</IDConflict>
+                            <PhoneConflict>false</PhoneConflict>
+                          </Conflicts>
+                          <EntityDetails>
+                            <AdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>The Cannabis Company | https://members.worldcompliance.com/metawatch2.aspx?id=672777fc-f2d8-4be3-9d6d-b31d431792a7</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Link to WorldCompliance Online Database</Value>
+                              </EntityAdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>http://omma.ok.gov/Websites/ddeer/images/OMMA%20Growers%20List.pdf | http://omma.ok.gov/list-of-businesses | http://omma.ok.gov/business-application-information3 | http://omma.ok.gov/</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Sources of Record Information</Value>
+                              </EntityAdditionalInfo>
+                            </AdditionalInfo>
+                            <Addresses>
+                              <EntityAddress>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                              <EntityAddress>
+                                <City>Shawnee</City>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <PostalCode>74801</PostalCode>
+                                <StateProvinceDistrict>Oklahoma</StateProvinceDistrict>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                            </Addresses>
+                            <Comments>Source: United States,US Marijuana Registered Businesses || Offense: Oklahoma State Registered Marijuana Growers. || Category: Registrations | Subcategory: Marijuana Reg Bus || Last updated: 2018-12-04 || Profile Notes: Type of Facility:
+        Medical.</Comments>
+                            <DateListed>2018-12-04</DateListed>
+                            <EntityType>Business</EntityType>
+                            <IDs>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>GAAA-EKWN-R1RR</Number>
+                                <Type>Other</Type>
+                              </EntityID>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>9582843</Number>
+                                <Type>ProprietaryUID</Type>
+                              </EntityID>
+                            </IDs>
+                            <ListReferenceNumber>9582843</ListReferenceNumber>
+                            <Name>
+                              <Full>The Cannabis Company</Full>
+                            </Name>
+                            <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          </EntityDetails>
+                          <EntityName>The Cannabis Company</EntityName>
+                          <EntityScore>87</EntityScore>
+                          <EntityUniqueID>WX0009582843</EntityUniqueID>
+                          <FalsePositive>false</FalsePositive>
+                          <File>
+                            <Build>2020-02-06T09:49:02Z</Build>
+                            <Custom>false</Custom>
+                            <ID>411095</ID>
+                            <Name>WorldCompliance - Registrations.BDF</Name>
+                            <Published>2020-02-05T00:01:00Z</Published>
+                            <Type>BDF</Type>
+                          </File>
+                          <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
+                          <ID>-1</ID>
+                          <MatchReAlert>false</MatchReAlert>
+                          <PreviousResultID>-1</PreviousResultID>
+                          <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
+                          <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
+                          <TrueMatch>false</TrueMatch>
+                        </WLMatch>
+                        <WLMatch>
+                          <AcceptListID>-1</AcceptListID>
+                          <AddedToAcceptList>false</AddedToAcceptList>
+                          <AddressName>false</AddressName>
+                          <AutoFalsePositive>false</AutoFalsePositive>
+                          <BestAddressIsPartial>false</BestAddressIsPartial>
+                          <BestCountry/>
+                          <BestCountryScore>-1</BestCountryScore>
+                          <BestCountryType>None</BestCountryType>
+                          <BestDOBIsPartial>false</BestDOBIsPartial>
+                          <BestName>Cannabiz</BestName>
+                          <BestNameScore>86</BestNameScore>
+                          <CheckSum>43977</CheckSum>
+                          <Conflicts>
+                            <AddressConflict>false</AddressConflict>
+                            <CitizenshipConflict>false</CitizenshipConflict>
+                            <CountryConflict>false</CountryConflict>
+                            <DOBConflict>false</DOBConflict>
+                            <EntityTypeConflict>false</EntityTypeConflict>
+                            <GenderConflict>false</GenderConflict>
+                            <IDConflict>false</IDConflict>
+                            <PhoneConflict>false</PhoneConflict>
+                          </Conflicts>
+                          <EntityDetails>
+                            <AdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>Cannabiz | https://members.worldcompliance.com/metawatch2.aspx?id=1b104f64-acb5-47a2-9400-a332a57a27d9</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Link to WorldCompliance Online Database</Value>
+                              </EntityAdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>https://lcb.wa.gov/sites/default/files/publications/Public_Records/2019/MarijuanaApplicants.xls | https://lcb.wa.gov/records/frequently-requested-lists</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Sources of Record Information</Value>
+                              </EntityAdditionalInfo>
+                            </AdditionalInfo>
+                            <Addresses>
+                              <EntityAddress>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                              <EntityAddress>
+                                <City>Puyallup</City>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <PostalCode>983713848</PostalCode>
+                                <StateProvinceDistrict>Washington</StateProvinceDistrict>
+                                <Street1>1109 River Road</Street1>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                            </Addresses>
+                            <Comments>Source: United States,US Marijuana Registered Businesses || Offense: Washington State Registered Marijuana Dispensary. || Category: Registrations | Subcategory: Marijuana Reg Bus || Last updated: 2019-09-16 || Profile Notes: Type of Facility:
+        Medical and Recreational.</Comments>
+                            <DateListed>2017-07-11</DateListed>
+                            <EntityType>Business</EntityType>
+                            <IDs>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>087932</Number>
+                                <Type>Other</Type>
+                              </EntityID>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>8296877</Number>
+                                <Type>ProprietaryUID</Type>
+                              </EntityID>
+                            </IDs>
+                            <ListReferenceNumber>8296877</ListReferenceNumber>
+                            <Name>
+                              <Full>Cannabiz</Full>
+                            </Name>
+                            <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          </EntityDetails>
+                          <EntityName>Cannabiz</EntityName>
+                          <EntityScore>86</EntityScore>
+                          <EntityUniqueID>WX0008296877</EntityUniqueID>
+                          <FalsePositive>false</FalsePositive>
+                          <File>
+                            <Build>2020-02-06T09:49:02Z</Build>
+                            <Custom>false</Custom>
+                            <ID>411095</ID>
+                            <Name>WorldCompliance - Registrations.BDF</Name>
+                            <Published>2020-02-05T00:01:00Z</Published>
+                            <Type>BDF</Type>
+                          </File>
+                          <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
+                          <ID>-1</ID>
+                          <MatchReAlert>false</MatchReAlert>
+                          <PreviousResultID>-1</PreviousResultID>
+                          <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
+                          <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
+                          <TrueMatch>false</TrueMatch>
+                        </WLMatch>
+                        <WLMatch>
+                          <AcceptListID>-1</AcceptListID>
+                          <AddedToAcceptList>false</AddedToAcceptList>
+                          <AddressName>false</AddressName>
+                          <AutoFalsePositive>false</AutoFalsePositive>
+                          <BestAddressIsPartial>false</BestAddressIsPartial>
+                          <BestCountry/>
+                          <BestCountryScore>-1</BestCountryScore>
+                          <BestCountryType>None</BestCountryType>
+                          <BestDOBIsPartial>false</BestDOBIsPartial>
+                          <BestName>High Culture Cannabis</BestName>
+                          <BestNameScore>86</BestNameScore>
+                          <CheckSum>54246</CheckSum>
+                          <Conflicts>
+                            <AddressConflict>false</AddressConflict>
+                            <CitizenshipConflict>false</CitizenshipConflict>
+                            <CountryConflict>false</CountryConflict>
+                            <DOBConflict>false</DOBConflict>
+                            <EntityTypeConflict>false</EntityTypeConflict>
+                            <GenderConflict>false</GenderConflict>
+                            <IDConflict>false</IDConflict>
+                            <PhoneConflict>false</PhoneConflict>
+                          </Conflicts>
+                          <EntityDetails>
+                            <AdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>High Culture LLC | https://members.worldcompliance.com/metawatch2.aspx?id=c1e7f1f0-f244-45be-a826-7131c57ecfa8</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Link to WorldCompliance Online Database</Value>
+                              </EntityAdditionalInfo>
+                              <EntityAdditionalInfo>
+                                <Comments>https://www.colorado.gov/pacific/sites/default/files/190603%20Stores.xlsx | https://www.colorado.gov/pacific/sites/default/files/Stores%2009042018_1.xlsx | https://www.colorado.gov/pacific/sites/default/files/Stores%2010012018.pdf | https://www.colorado.gov/pacific/enforcement/med-licensed-facilities</Comments>
+                                <ID>0</ID>
+                                <Type>Other</Type>
+                                <Value>Sources of Record Information</Value>
+                              </EntityAdditionalInfo>
+                            </AdditionalInfo>
+                            <Addresses>
+                              <EntityAddress>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                              <EntityAddress>
+                                <City>Lyons</City>
+                                <Country>United States</Country>
+                                <ID>0</ID>
+                                <PostalCode>80540</PostalCode>
+                                <StateProvinceDistrict>Colorado</StateProvinceDistrict>
+                                <Street1>4170 Ute Highway</Street1>
+                                <Type>Unknown</Type>
+                              </EntityAddress>
+                            </Addresses>
+                            <AKAs>
+                              <EntityAKA>
+                                <Category>None</Category>
+                                <Comments>ID: 105249475</Comments>
+                                <ID>0</ID>
+                                <Name>
+                                  <Full>High Culture Cannabis</Full>
+                                </Name>
+                                <Type>None</Type>
+                              </EntityAKA>
+                            </AKAs>
+                            <Comments>Source: United States,US Marijuana Registered Businesses || Offense: Colorado State Registered Marijuana Dispensary. || Category: Registrations | Subcategory: Marijuana Reg Bus || Last updated: 2019-07-04 || Profile Notes: Type of Facility:
+        Recreational.</Comments>
+                            <DateListed>2018-10-05</DateListed>
+                            <EntityType>Business</EntityType>
+                            <IDs>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>402R-00772</Number>
+                                <Type>Other</Type>
+                              </EntityID>
+                              <EntityID>
+                                <ID>0</ID>
+                                <Number>9436994</Number>
+                                <Type>ProprietaryUID</Type>
+                              </EntityID>
+                            </IDs>
+                            <ListReferenceNumber>9436994</ListReferenceNumber>
+                            <Name>
+                              <Full>High Culture LLC</Full>
+                            </Name>
+                            <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          </EntityDetails>
+                          <EntityName>High Culture LLC</EntityName>
+                          <EntityScore>86</EntityScore>
+                          <EntityUniqueID>WX0009436994</EntityUniqueID>
+                          <FalsePositive>false</FalsePositive>
+                          <File>
+                            <Build>2020-02-06T09:49:02Z</Build>
+                            <Custom>false</Custom>
+                            <ID>411095</ID>
+                            <Name>WorldCompliance - Registrations.BDF</Name>
+                            <Published>2020-02-05T00:01:00Z</Published>
+                            <Type>BDF</Type>
+                          </File>
+                          <GatewayOFACScreeningIndicatorMatch>false</GatewayOFACScreeningIndicatorMatch>
+                          <ID>-1</ID>
+                          <MatchReAlert>false</MatchReAlert>
+                          <PreviousResultID>-1</PreviousResultID>
+                          <ReasonListed>Registrations:Marijuana Reg Bus</ReasonListed>
+                          <ResultDate>2020-02-07T14:53:59.5751775Z</ResultDate>
+                          <SecondaryOFACScreeningIndicatorMatch>false</SecondaryOFACScreeningIndicatorMatch>
+                          <TrueMatch>false</TrueMatch>
+                        </WLMatch>
+                      </Matches>
+                      <Status>Results</Status>
+                    </Watchlist>
+                  </ResultRecord>
+                </Records>
+                <SearchEngineVersion>5.28.1252.0</SearchEngineVersion>
+              </SearchResult>
+            </SearchResponse>
+          </s:Body>
+        </s:Envelope>
+    http_version: null
+  recorded_at: Fri, 07 Feb 2020 14:53:59 GMT
+recorded_with: VCR 5.1.0
