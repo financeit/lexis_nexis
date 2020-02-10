@@ -10,7 +10,7 @@ RSpec.describe LexisNexis::SearchService do
                'https://bridgerstaging.lexisnexis.com/LN.WebServices/11.0/XGServices.svc?wsdl')
   end
 
-  describe '.call!' do
+  describe '.call' do
     context 'when searching a business entity' do
       let(:entity_type) { LexisNexis::SearchService::BUSINESS_ENTITY }
       let(:input_data) { { name: { full_name: business_name } } }
@@ -19,7 +19,7 @@ RSpec.describe LexisNexis::SearchService do
       context 'when performing a regular search' do
         it 'has records in the result' do
           response = VCR.use_cassette('successful_business_search') do
-            LexisNexis::SearchService.call!(entity_type, input_data)
+            LexisNexis::SearchService.call(entity_type, input_data)
           end
           expect(response.code).to be_nil
           expect(response.data.dig(:search_response, :search_result, :records)).not_to be_empty
@@ -31,7 +31,7 @@ RSpec.describe LexisNexis::SearchService do
 
         it 'has no records in the result' do
           response = VCR.use_cassette('no_hit_business_search') do
-            LexisNexis::SearchService.call!(entity_type, input_data)
+            LexisNexis::SearchService.call(entity_type, input_data)
           end
           expect(response.code).to be_nil
           expect(response.data.dig(:search_response, :search_result)).not_to be_empty
@@ -44,7 +44,7 @@ RSpec.describe LexisNexis::SearchService do
 
         it 'returns a result containing a watchlist match error' do
           response = VCR.use_cassette('invalid_input_business_search') do
-            LexisNexis::SearchService.call!(entity_type, input_data)
+            LexisNexis::SearchService.call(entity_type, input_data)
           end
           expect(response.code).to be_nil
           error = response.data.dig(
@@ -67,7 +67,7 @@ RSpec.describe LexisNexis::SearchService do
 
         it 'returns a deserialization error' do
           response = VCR.use_cassette('invalid_format_business_search') do
-            LexisNexis::SearchService.call!(entity_type, input_data.merge(invalid_additional_info))
+            LexisNexis::SearchService.call(entity_type, input_data.merge(invalid_additional_info))
           end
           expect(response.code).not_to be_nil
           expect(response.data).to be_nil
@@ -94,7 +94,7 @@ RSpec.describe LexisNexis::SearchService do
       context 'when performing a regular search' do
         it 'has records in the result' do
           response = VCR.use_cassette('successful_individual_search') do
-            LexisNexis::SearchService.call!(entity_type, input_data)
+            LexisNexis::SearchService.call(entity_type, input_data)
           end
           expect(response.code).to be_nil
           expect(response.data[:search_response][:search_result][:records]).not_to be_empty
@@ -106,7 +106,7 @@ RSpec.describe LexisNexis::SearchService do
 
         it 'has no records in the result' do
           response = VCR.use_cassette('no_hit_individual_search') do
-            LexisNexis::SearchService.call!(entity_type, input_data)
+            LexisNexis::SearchService.call(entity_type, input_data)
           end
           expect(response.code).to be_nil
           expect(response.data[:search_response][:search_result]).not_to be_empty
@@ -119,7 +119,7 @@ RSpec.describe LexisNexis::SearchService do
 
         it 'returns a result containing a watchlist match error' do
           response = VCR.use_cassette('invalid_input_individual_search') do
-            LexisNexis::SearchService.call!(entity_type, input_data)
+            LexisNexis::SearchService.call(entity_type, input_data)
           end
           expect(response.code).to be_nil
           error = response.data.dig(
@@ -142,7 +142,7 @@ RSpec.describe LexisNexis::SearchService do
 
         it 'returns a deserialization error' do
           response = VCR.use_cassette('invalid_format_individual_search') do
-            LexisNexis::SearchService.call!(entity_type, input_data)
+            LexisNexis::SearchService.call(entity_type, input_data)
           end
           expect(response.code).not_to be_nil
           expect(response.data).to be_nil
@@ -152,6 +152,5 @@ RSpec.describe LexisNexis::SearchService do
         end
       end
     end
-    # TODO: error case for SOAPFault
   end
 end

@@ -3,7 +3,6 @@
 module LexisNexis
   # Module to build search attributes for LexisNexis search operation input
   module SearchAttributesHelper
-    # Is there some way to get this from the API?
     VALID_ADDRESS_TYPES = %w[Current Mailing Previous Unknown].freeze
     VALID_PHONE_TYPES = %w[Business Cell Fax Home Work Unknown].freeze
     VALID_ID_TYPES = %w[ABARouting Account AlienRegistration BankIdentifierCode BankPartyID Cedula ChipsUID
@@ -27,16 +26,16 @@ module LexisNexis
               Entity: {
                 EntityType: entity_type,
                 Name: {
-                  First: data.dig(:name, :first_name), # Required for individual
-                  Last: data.dig(:name, :last_name), # Required for individual
-                  Full: data.dig(:name, :full_name), # Required for business
+                  First: data.dig(:name, :first_name),
+                  Last: data.dig(:name, :last_name),
+                  Full: data.dig(:name, :full_name),
                   Middle: data.dig(:name, :middle_name)
                 }.compact,
-                Addresses: get_addresses_hash(data.dig(:addresses)), # Both
-                IDs: get_object_hash_list(:InputId, data.dig(:ids)), # Might just be for business
-                Phones: get_object_hash_list(:InputPhone, data.dig(:phones)), # Both
-                Gender: data.dig(:other, :gender), # Only for individual
-                AdditionalInfo: get_object_hash_list(:InputAdditionalInfo, data.dig(:additional_info)) # Individual
+                Addresses: get_addresses_hash(data.dig(:addresses)),
+                IDs: get_object_hash_list(:InputId, data.dig(:ids)),
+                Phones: get_object_hash_list(:InputPhone, data.dig(:phones)),
+                Gender: data.dig(:other, :gender),
+                AdditionalInfo: get_object_hash_list(:InputAdditionalInfo, data.dig(:additional_info))
               }.compact
             }
           }

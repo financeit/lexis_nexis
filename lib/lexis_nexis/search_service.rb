@@ -17,7 +17,7 @@ module LexisNexis
       config: { PredefinedSearchName: PREDEFINED_SEARCH_NAME }
     }
 
-    def self.call!(entity_type, input_data)
+    def self.call(entity_type, input_data)
       LexisNexis.send_request(
         LexisNexis.client(LEXIS_NEXIS_WSDL),
         SEARCH_OPERATION,
