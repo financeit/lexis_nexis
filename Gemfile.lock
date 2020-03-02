@@ -44,7 +44,7 @@ GEM
     public_suffix (4.0.1)
     rack (2.1.2)
     rainbow (3.0.0)
-    rake (10.5.0)
+    rake (13.0.1)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -97,7 +97,7 @@ DEPENDENCIES
   lexis_nexis!
   nokogiri
   pry-byebug
-  rake (~> 10.0)
+  rake (~> 13.0)
   rspec (~> 3.0)
   rubocop
   rubocop-rspec
