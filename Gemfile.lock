@@ -80,7 +80,7 @@ GEM
       wasabi (~> 3.1.0)
     slop (3.6.0)
     unicode-display_width (1.4.0)
-    vcr (5.1.0)
+    vcr (6.0.0)
     wasabi (3.1.0)
       httpi (~> 2.0)
       nokogiri (>= 1.4.0)
@@ -101,7 +101,7 @@ DEPENDENCIES
   rspec (~> 3.0)
   rubocop
   rubocop-rspec
-  vcr (~> 5.1.0)
+  vcr (~> 6.0.0)
   webmock (~> 2.3.2)
 
 BUNDLED WITH
