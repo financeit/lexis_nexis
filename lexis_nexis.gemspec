@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'rubocop-rspec'
   spec.add_development_dependency 'vcr', '~> 5.1.0'
-  spec.add_development_dependency 'webmock', '~> 2.3.2'
+  spec.add_development_dependency 'webmock', '~> 3.12.1'
 
   spec.add_runtime_dependency 'savon'
 end
